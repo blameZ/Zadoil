@@ -5,9 +5,286 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zadoil</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/7979a03bd9.js" crossorigin="anonymous"></script>
 </head>
 
-<body>
+<body data-bs-spy="scroll" data-bs-target="#navId">
+
+    <nav id="navId" class="navbar navbar-expand-lg position-fixed top-0 w-100 py-3">
+        <div class="container">
+            <a class="nav-link navbar-brand" href="#"><img src="/jpg/zadoil_logo_color_01.png"
+                    alt="Logo firmy Zadoil">Zadoil</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#petrol-stations">Stacje paliw</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#fuel-distribution">Dystrybucja paliw</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#construction">Budownictwo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#machinery-sales">Sprzedaż maszyn</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#contact">Kontakt</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-img" id="home">
+        <div class="hero-txt text-center p-2">
+            <div class="animate-text" data-aos="fade-down">
+                <h1><img class="hero-txt-logo" src="jpg/zadoil_logo_color_01.png"
+                        alt="Logo firmy Zadoil"><span>ZADOIL</span></h1>
+                <p>Kompleksowe wsparcie w podróży i biznesie</p>
+            </div>
+            <a href="#aboutus" class="btn btn-outline-light mt-2 text-uppercase" data-aos="fade-up">poznaj nas</a>
+        </div>
+        <div class="hero-shadow"></div>
+        <a href="#aboutus"><i class="fa-solid fa-chevron-down"></i></a>
+    </header>
+
+    <main>
+        <section id="aboutus" class="aboutus bg-light py-5">
+            <div class="container">
+                <h2 class="section-title">O NAS</h2>
+                <div class="underline"></div>
+                <div class="row">
+                    <div class="col-sm-6 col-md-4 text-center" data-aos="fade-right">
+                        <div class="aboutus-hover">
+                            <p><i class="fa-solid fa-gas-pump"></i></p>
+                            <p class="aboutus-card-title mb1">stacje paliw</p>
+                            <p class="aboutus-card-text ">Prowadzimy stacje paliw w Białce, Skomielnej Białej i
+                                Wadowicach!
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 text-center" data-aos="fade-down">
+                        <div class="aboutus-hover">
+                            <p><i class="fa-solid fa-helmet-safety"></i></p>
+                            <p class="aboutus-card-title mb1">usługi budowlane</p>
+                            <p class="aboutus-card-text ">Oferujemy szeroki zakres usług budowlanych, od brukowania po
+                                prace ziemne!
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 text-center" data-aos="fade-left">
+                        <div class="aboutus-hover">
+                            <p><i class="fa-solid fa-clock-rotate-left"></i></p>
+                            <p class="aboutus-card-title mb1">wynajem maszyn</p>
+                            <p class="aboutus-card-text ">Wynajmij koparki i ładowarki!</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 text-center" data-aos="fade-right">
+                        <div class="aboutus-hover">
+                            <p><i class="fa-solid fa-money-bill"></i></p>
+                            <p class="aboutus-card-title mb1">sprzedaż maszyn</p>
+                            <p class="aboutus-card-text ">Zajmujemy się również sprzedażą maszyn budowlanych!</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 text-center" data-aos="fade-up">
+                        <div class="aboutus-hover">
+                            <p><i class="fa-regular fa-calendar-days"></i></p>
+                            <p class="aboutus-card-title mb1">wieloletnie doświadczenie</p>
+                            <p class="aboutus-card-text ">Działamy na rynku od 1999 roku, oferując sprawdzone usługi!
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 text-center" data-aos="fade-left">
+                        <div class="aboutus-hover">
+                            <p><i class="fa-solid fa-bed"></i></p>
+                            <p class="aboutus-card-title mb1">noclegi i gastronomia</p>
+                            <p class="aboutus-card-text ">Prowadzimy stacje paliw w Białce, Skomielnej Białej i
+                                Wadowicach!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="petrol-stations" class="petrol-stations section-paddin bg-white py-5">
+            <div class="container">
+                <h2 class="section-title">STACJE PALIW</h2>
+                <div class="underline"></div>
+
+                <div class="petrol-stations__box" data-aos="fade-right">
+                    <div class="petrol-stations__box-img petrol-stations__box-img--left">
+                        <img class="petrol-stations__img" src="./jpg/restaurant_view_01.jpg"
+                            alt="Zdjęcie stacji paliw w Białce">
+                    </div>
+                    <div class="petrol-stations__box-text">
+                        <h3 class="petrol-stations__title">Stacja Orlen - Białka</h3>
+                        <p><i class="fa-solid fa-location-dot"></i> Adres: Białka 552, 34-220 Białka</p>
+                        <p><i class="fa-regular fa-clock"></i> Godziny: Czynne całą dobę</p>
+                        <p><i class="fa-solid fa-phone"></i> Telefon: 33 877 36 73</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="petrol-stations__box" data-aos="fade-left">
+                    <div class="petrol-stations__box-img petrol-stations__box-img--right">
+                        <img class="petrol-stations__img" src="./jpg/company_truck_01.jpg"
+                            alt="Zdjęcie stacji paliw w Białce">
+                    </div>
+                    <div class="petrol-stations__box-text">
+                        <h3 class="petrol-stations__title">Stacja Orlen - Skomielna Biała</h3>
+                        <p><i class="fa-solid fa-location-dot"></i> Adres: Białka 552, 34-220 Białka</p>
+                        <p><i class="fa-regular fa-clock"></i> Godziny: Czynne całą dobę</p>
+                        <p><i class="fa-solid fa-phone"></i> Telefon: 33 877 36 73</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="petrol-stations__box" data-aos="fade-right">
+                    <div class="petrol-stations__box-img petrol-stations__box-img--left">
+                        <img class="petrol-stations__img" src="./jpg/car_wash_01.jpg"
+                            alt="Zdjęcie stacji paliw w Białce">
+                    </div>
+                    <div class="petrol-stations__box-text">
+                        <h3 class="petrol-stations__title">Stacja Moya - Wadowice</h3>
+                        <p><i class="fa-solid fa-location-dot"></i> Adres: Białka 552, 34-220 Białka</p>
+                        <p><i class="fa-regular fa-clock"></i> Godziny: Czynne całą dobę</p>
+                        <p><i class="fa-solid fa-phone"></i> Telefon: 33 877 36 73</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="fuel-distribution" class="fuel-distribution bg-light py-5">
+            <div class="container">
+                <h2 class="section-title">DYSTRYBUCJA PALIW</h2>
+                <div class="underline"></div>
+
+                <div class="fuel-distribution__box" data-aos="fade-left">
+                    <div class="fuel-distribution__box-img">
+                        <img class="fuel-distribution__img" src="./jpg/car_wash_01.jpg"
+                            alt="Zdjęcie promujące dystrybucję paliw oferowane przez firmę Zadoil">
+                    </div>
+
+                    <div class="fuel-distribution__box-text">
+                        <p class="fuel-distribution__text">
+                            Firma Zadoil oferuje sprzedaż i dostawę paliw płynnych od Orlen i Lotos. Paliwa dostarczane
+                            są własnym transportem, jednorazowo do 14 000 litrów, w ciągu 24 godzin od złożenia
+                            zamówienia.</br>
+                            Dostawy realizowane są z terminali producentów, a wraz z nimi klient
+                            otrzymuje świadectwo jakości. Ceny paliw zależą od historii współpracy, formy płatności i
+                            wielkości
+                            dostawy.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="fuel-distribution-shadow"></div>
+        </section>
+
+        <section id="construction" class="construction bg-light py-5">
+            <div class="container">
+                <h2 class="section-title">BUDOWNICTWO</h2>
+                <div class="underline"></div>
+
+                <div class="construction__box" data-aos="fade-right">
+                    <div class="construction__text">
+                        <p>
+                            Firma Zadoil w swoim zakresie działalności oferuje również brukarstwo, układanie kostki
+                            brukowej, wykonywanie wjazdów do posesji, zakładanie ogródów oraz roboty ziemne. </br>
+                            Dostosowując się do potrzeb klientów roboty wykonujemy tak z własnego jak i powierzoneego
+                            materiału. Naszym dostawcą kostki brukowej jest "CHYŻBET". <br>
+                            Oferujemy również wynajem koparki i koparko-ładowarki z operatorem.
+                        </p>
+                    </div>
+                    <div class="construction__box-img">
+                        <img src="./jpg/machine_05.jpg" alt="Zdjęcie promujące budownictwo oferowane przez firmę Zadoil"
+                            class="construction__img">
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="machinery-sales" class="machinery-sales bg-white py-5">
+            <div class="container">
+                <h2 class="section-title">SPRZEDAŻ MASZYN</h2>
+                <div class="underline"></div>
+
+                <div class="machinery-sales__link" data-aos="fade-up">
+                    <img src="./jpg/zadoil_machines_logo_01.png"
+                        alt="Logo firmy Zadoil, które przenosi do oferty sprzedaży maszyn.">
+
+                    <button><a href="https://google.com">Sprawdź naszą ofertę!</a></button>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact py-5 bg-light">
+            <h2 class="section-title">kontakt</h2>
+            <div class="underline"></div>
+
+            <div class="container contact-us text-center">
+                <div class="row">
+                    <div class="col-lg-6 col-sm-6 order-1" data-aos="fade-in">
+                        <div class="contact-item">
+                            <div class="contact-title">
+                                <p>główna siedziba</p>
+                            </div>
+                            <div class="contact-text">
+                                <p>34-220 Białka</p>
+                                <p>+48 000 000 000</p>
+                                <p>mail@mail.pl</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-sm-12 order-0 order-lg-1" data-aos="fade-in">
+                        <div class="contact-item">
+                            <div class="contact-title">
+                                <p>social media</p>
+                            </div>
+                            <div class="contact-text">
+                                <div class="social-media__box">
+                                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="#"><i class="fab fa-x-twitter"></i></a>
+                                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Zadoil. Wszelkie prawa zastrzeżone.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./js/aos.js"></script>
+    <script src="./js/slick.js"></script>
+    <script src="./js/script.js"></script>
 
 </body>
 
