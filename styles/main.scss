@@ -309,25 +309,10 @@ header.hero-img {
 			height: 100%;
 			object-fit: cover;
 			border-radius: 1%;
-		}
-
-		button {
-			position: absolute;
-			top: 85%;
-			width: 80%;
-			padding: 10px;
-			border-radius: 5%;
-			transition: background-color 0.3s ease;
-			text-transform: uppercase;
-			border: none;
-
-			a {
-				color: black;
-				text-decoration: none;
-			}
+			transition: transform 0.3s;
 
 			&:hover {
-				background-color: colors.$main-color;
+				transform: scale(1.05);
 			}
 		}
 	}

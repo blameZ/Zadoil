@@ -260,23 +260,10 @@ header.hero-img .fa-chevron-down {
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 1%;
+  transition: transform 0.3s;
 }
-.machinery-sales__link button {
-  position: absolute;
-  top: 85%;
-  width: 80%;
-  padding: 10px;
-  border-radius: 5%;
-  transition: background-color 0.3s ease;
-  text-transform: uppercase;
-  border: none;
-}
-.machinery-sales__link button a {
-  color: black;
-  text-decoration: none;
-}
-.machinery-sales__link button:hover {
-  background-color: #039dff;
+.machinery-sales__link img:hover {
+  transform: scale(1.05);
 }
 
 .contact {
