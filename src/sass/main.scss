@@ -436,6 +436,10 @@ footer p {
 }
 
 @media (min-width: 768px) {
+	header.hero-img {
+		background-image: url('../../dist/img/petrol_station_big.jpg');
+	}
+
 	.petrol-stations {
 		h3 {
 			font-size: 2.5em;
