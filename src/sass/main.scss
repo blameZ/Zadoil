@@ -7,6 +7,11 @@
 	padding: 0;
 }
 
+body,
+html {
+	overflow-x: hidden;
+}
+
 html {
 	scroll-padding-top: 75px;
 }
@@ -15,7 +20,6 @@ body {
 	background-color: colors.$bg-color;
 	font-family: 'League Spartan', sans-serif;
 	font-weight: 400;
-	overflow-x: hidden;
 }
 
 hr {
@@ -90,7 +94,7 @@ nav {
 header.hero-img {
 	position: relative;
 	height: 100vh;
-	background-image: url('../../dist/img/petrol_station.jpg');
+	background-image: url('../../dist/img/petrol_station_small.jpg');
 	background-size: cover;
 	background-position: center center;
 	background-attachment: fixed;
