@@ -1,4 +1,5 @@
 @use './colors' as colors;
+@use './variables' as variables;
 @import './animations';
 
 * {
@@ -97,7 +98,7 @@ header.hero-img {
 	background-image: url('../../dist/img/petrol_station_small.jpg');
 	background-size: cover;
 	background-position: center center;
-	background-attachment: fixed;
+	background-attachment: scroll;
 	color: colors.$white;
 	z-index: 0;
 
@@ -191,18 +192,26 @@ header.hero-img {
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		padding: 2em;
-		gap: 2em;
+		padding: 1.5em;
+		gap: 1.5em;
 	}
 
 	&__img {
 		width: 100%;
-		margin-bottom: 1em;
-		border-radius: 1%;
+		border-radius: variables.$image-border-radius;
 	}
 
 	&__title {
 		margin-bottom: 0.5em;
+		font-size: 1.8rem;
+	}
+
+	iframe {
+		width: 100%;
+		height: 250px;
+		border: none;
+		border-radius: variables.$image-border-radius;
+		box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 	}
 }
 
@@ -222,7 +231,7 @@ header.hero-img {
 	}
 
 	&__img {
-		border-radius: 1%;
+		border-radius: variables.$image-border-radius;
 		width: 100%;
 	}
 
@@ -261,7 +270,7 @@ header.hero-img {
 		left: 0;
 		width: 100%;
 		height: 100%;
-		background-color: rgba(0, 0, 0, 0.7);
+		background-color: rgba(0, 0, 0, 0.6);
 		z-index: -5;
 	}
 }
@@ -298,7 +307,7 @@ header.hero-img {
 
 	&__img {
 		margin-bottom: 1em;
-		border-radius: 1%;
+		border-radius: variables.$image-border-radius;
 		width: 100%;
 	}
 }
@@ -323,7 +332,7 @@ header.hero-img {
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
-			border-radius: 1%;
+			border-radius: variables.$image-border-radius;
 			transition: transform 0.3s;
 
 			&:hover {
@@ -438,16 +447,22 @@ footer p {
 @media (min-width: 768px) {
 	header.hero-img {
 		background-image: url('../../dist/img/petrol_station_big.jpg');
+		background-attachment: fixed;
 	}
 
 	.petrol-stations {
 		h3 {
 			font-size: 2.5em;
 		}
+
 		&__box {
 			&-text {
 				font-size: 1.1em;
 			}
+		}
+
+		iframe {
+			height: 200%;
 		}
 	}
 
