@@ -20,53 +20,117 @@
 <body data-bs-spy="scroll" data-bs-target="#navId">
 
     <nav id="navId" class="navbar navbar-expand-lg position-fixed top-0 w-100 py-3">
+    <div class="container">
+        <a class="nav-link navbar-brand" href="./index.html#"><img src="./dist/img/zadoil_logo_color_01.png"
+                alt="Logo firmy Zadoil">Zadoil</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" id="nav-rental" aria-current="page" href="./rental.html">Wynajem</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="./index.html#petrol-stations">Stacje paliw</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="./index.html#fuel-distribution">Dystrybucja paliw</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="./index.html#construction">Budownictwo</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="./index.html#machinery-sales">Sprzedaż maszyn</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="./index.html#contact">Kontakt</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+    <section id="rental-offers" class="rental-offers">
         <div class="container">
-            <a class="nav-link navbar-brand" href="#"><img src="./dist/img/zadoil_logo_color_01.png"
-                    alt="Logo firmy Zadoil">Zadoil</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <i class="fa-solid fa-bars"></i>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#petrol-stations">Stacje paliw</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#fuel-distribution">Dystrybucja paliw</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#construction">Budownictwo</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#machinery-sales">Sprzedaż maszyn</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#contact">Kontakt</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <header class="hero-img" id="home">
-        <div class="hero-txt text-center p-2">
-            <div class="animate-text" data-aos="fade-down">
-                <h1><img class="hero-txt-logo" src="./dist/img/zadoil_logo_color_01.png"
-                        alt="Logo firmy Zadoil"><span>ZADOIL</span></h1>
-                <p>Kompleksowe wsparcie w podróży i biznesie</p>
-            </div>
-            <a href="#aboutus" class="btn btn-outline-light mt-2 text-uppercase" data-aos="fade-up">poznaj nas</a>
-        </div>
-        <div class="hero-shadow"></div>
-        <a href="#aboutus"><i class="fa-solid fa-chevron-down"></i></a>
-    </header>
+            <h2 class="section-title">OFERTA WYPOŻYCZALNI</h2>
+            <div class="underline"></div>
 
-    <footer>
-        <p>&copy; <span id="current-year"></span> Zadoil. Wszelkie prawa zastrzeżone.</p>
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
-        crossorigin="anonymous"></script>
+            <div class="rental-offers__grid">
+                <div class="rental-offer" data-aos="fade-up">
+                    <div class="rental-offer__img">
+                        <img src="./dist/img/machine_01.jpg" alt="Koparka XYZ" class="rental-offer__image">
+                    </div>
+                    <h3 class="rental-offer__title">Koparka XYZ</h3>
+                    <p class="rental-offer__description">
+                        Wydajna koparka do prac ziemnych, idealna do wykopów i niwelacji terenu.
+                    </p>
+                    <a href="#" class="btn btn-outline-light mt-2 text-uppercase">Więcej</a>
+                </div>
+
+                <div class="rental-offer" data-aos="fade-up" data-aos-delay="100">
+                    <div class="rental-offer__img">
+                        <img src="./dist/img/machine_02.jpg" alt="Koparko-ładowarka ABC" class="rental-offer__image">
+                    </div>
+                    <h3 class="rental-offer__title">Koparko-ładowarka ABC</h3>
+                    <p class="rental-offer__description">
+                        Wielofunkcyjna maszyna do różnorodnych prac budowlanych i ziemnych.
+                    </p>
+                    <a href="#" class="btn btn-outline-light mt-2 text-uppercase">Więcej</a>
+                </div>
+
+                <div class="rental-offer" data-aos="fade-up" data-aos-delay="200">
+                    <div class="rental-offer__img">
+                        <img src="./dist/img/machine_03.jpg" alt="Walec DEF" class="rental-offer__image">
+                    </div>
+                    <h3 class="rental-offer__title">Walec DEF</h3>
+                    <p class="rental-offer__description">
+                        Niezawodny walec do zagęszczania gruntu i nawierzchni drogowych.
+                    </p>
+                    <a href="#" class="btn btn-outline-light mt-2 text-uppercase">Więcej</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact py-5 bg-light">
+    <h2 class="section-title">kontakt</h2>
+    <div class="underline"></div>
+
+    <div class="container contact-us text-center">
+        <div class="row">
+            <div class="col-lg-6 col-sm-12 order-1" data-aos="fade-in">
+                <div class="contact-item">
+                    <div class="contact-title">
+                        <p>główna siedziba</p>
+                    </div>
+                    <div class="contact-text">
+                        <p>34-220 Białka</p>
+                        <p>+48 000 000 000</p>
+                        <p>mail@mail.pl</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-sm-12 order-0 order-lg-1" data-aos="fade-in">
+                <div class="contact-item">
+                    <div class="contact-title">
+                        <p>social media</p>
+                    </div>
+                    <div class="contact-text">
+                        <div class="social-media__box">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; <span id="current-year"></span> Zadoil. Wszelkie prawa zastrzeżone.</p>
+</footer>
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>

@@ -12,6 +12,8 @@ document.addEventListener('DOMContentLoaded', function () {
 	function addShadow() {
 		if (window.scrollY >= 300) {
 			nav.classList.add('shadow-bg')
+		} else if (window.location.pathname.includes('rental')) {
+			nav.classList.add('shadow-bg')
 		} else {
 			nav.classList.remove('shadow-bg')
 		}
@@ -23,42 +25,45 @@ document.addEventListener('DOMContentLoaded', function () {
 		})
 	)
 
+	addShadow()
+
 	window.addEventListener('scroll', addShadow)
-})
-
-document.addEventListener('DOMContentLoaded', function () {
-	const navLinks = document.querySelectorAll('.nav-link')
-
-	navLinks.forEach(link => {
-		link.addEventListener('click', function () {
-			navLinks.forEach(nav => nav.classList.remove('active'))
-
-			this.classList.add('active')
-		})
-	})
 })
 
 document.addEventListener('DOMContentLoaded', function () {
 	const navLinks = document.querySelectorAll('.nav-link')
 	const sections = document.querySelectorAll('section')
 
-	window.addEventListener('scroll', function () {
-		let currentSection = ''
+	if (!window.location.pathname.includes('rental')) {
+		window.addEventListener('scroll', function () {
+			let currentSection = ''
 
-		sections.forEach(section => {
-			const sectionTop = section.offsetTop
-			const sectionHeight = section.clientHeight
+			sections.forEach(section => {
+				const sectionTop = section.offsetTop
+				const sectionHeight = section.clientHeight
 
-			if (pageYOffset >= sectionTop - sectionHeight / 3) {
-				currentSection = section.getAttribute('id')
-			}
+				if (pageYOffset >= sectionTop - sectionHeight / 3) {
+					currentSection = section.getAttribute('id')
+				}
+			})
+
+			navLinks.forEach(link => {
+				link.classList.remove('active')
+				if (link.getAttribute('href').includes(currentSection)) {
+					link.classList.add('active')
+				}
+			})
 		})
+	}
+})
 
-		navLinks.forEach(link => {
-			link.classList.remove('active')
-			if (link.getAttribute('href').includes(currentSection)) {
-				link.classList.add('active')
-			}
-		})
-	})
+document.addEventListener('DOMContentLoaded', function () {
+	const navLinks = document.querySelectorAll('.nav-link')
+	const currentPath = window.location.pathname
+
+	navLinks.forEach(link => link.classList.remove('active'))
+
+	if (currentPath.includes('rental')) {
+		document.getElementById('nav-rental').classList.add('active')
+	}
 })
