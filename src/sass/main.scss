@@ -176,6 +176,8 @@ header.hero-img {
 // =============================
 
 .petrol-stations {
+	background: linear-gradient(120deg, colors.$light-gray, colors.$white);
+
 	h3 {
 		text-transform: capitalize;
 		font-size: 1.7rem;
@@ -277,38 +279,57 @@ header.hero-img {
 
 // =============================
 // CONSTRUCTION
-// =============================
+// ============================
 
 .construction {
-	h2 {
-		color: colors.$black;
-	}
+	background: linear-gradient(120deg, colors.$light-gray, colors.$white);
 
 	&__box {
 		display: flex;
 		flex-direction: column;
-		justify-content: space-between;
+		justify-content: center;
 		align-items: center;
-		padding: 2em;
-		gap: 3rem;
+		padding: 3rem;
+		gap: 2rem;
+		border-radius: 10px;
+		background: colors.$white;
 
 		&-img {
-			width: 80vw;
+			width: 100%;
+			height: auto;
+			border-radius: 1rem;
+			overflow: hidden;
+
+			img {
+				width: 100%;
+				height: auto;
+				object-fit: cover;
+				transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+
+				&:hover {
+					transform: scale(1.05);
+					filter: brightness(1.1);
+				}
+			}
 		}
 	}
 
 	&__text {
-		font-size: 1.3rem;
+		font-size: 1.2rem;
 		line-height: 1.8em;
-		text-justify: auto;
-
+		color: rgba(0, 0, 0, 0.8);
+		text-align: center;
+		padding: 1rem 2rem;
 		order: 1;
+		background: rgba(0, 0, 0, 0.05);
+		border-radius: 10px;
 	}
 
 	&__img {
-		margin-bottom: 1em;
-		border-radius: variables.$image-border-radius;
+		margin-bottom: 1rem;
+		border-radius: 10px;
 		width: 100%;
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 	}
 }
 
@@ -396,79 +417,275 @@ header.hero-img {
 
 .rental-offers {
 	padding: 10rem 0;
-	background-color: colors.$bg-color;
+	background: linear-gradient(120deg, colors.$white, colors.$light-gray);
 
 	&__grid {
 		display: flex;
 		flex-wrap: wrap;
 		gap: 1.5rem;
-		justify-content: space-between;
+		justify-content: center;
 	}
 
 	.rental-offer {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		justify-content: center;
-		flex: 1 1 100%;
+		justify-content: space-between;
+		flex: 1 1 100%; // Domyślnie jedna kolumna na małych ekranach
 		max-width: 100%;
 		background-color: colors.$white;
-		border: 1px solid #ddd;
-		border-radius: 0.5rem;
+		border: 1px solid rgba(0, 0, 0, 0.1);
+		border-radius: 1.5rem;
 		overflow: hidden;
-		transition: transform 0.3s;
+		transition: transform 0.4s ease, box-shadow 0.4s ease;
+		box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 
 		&:hover {
-			transform: translateY(-5px);
+			transform: translateY(-10px) scale(1.02);
+			box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 		}
 
 		&__img {
 			width: 100%;
-			height: 200px;
+			height: 220px;
 			overflow: hidden;
 
 			.rental-offer__image {
 				width: 100%;
 				height: 100%;
 				object-fit: cover;
-				transition: transform 0.3s;
+				transition: transform 0.3s ease-in-out;
 
 				&:hover {
-					transform: scale(1.05);
+					transform: scale(1.1);
+					filter: brightness(1.1);
 				}
 			}
 		}
 
 		&__title {
 			font-size: 1.5rem;
-			font-weight: 300;
-			margin: 1rem 0;
+			font-weight: 500;
+			margin: 1.5rem 1rem 0.5rem;
 			color: colors.$main-color;
+			text-align: center;
+			text-transform: uppercase;
 		}
 
 		&__description {
 			font-size: 1rem;
-			margin: 0 1rem 1.5rem;
-			color: colors.$bg-color-dark;
+			margin: 0 1.5rem 1.5rem;
+			color: rgba(0, 0, 0, 0.7);
+			line-height: 1.8;
+			text-align: center;
+			font-style: italic;
 		}
 
 		.btn {
-			margin-bottom: 1rem;
-			width: 60%;
-			background-color: colors.$main-color;
+			margin: 1rem auto;
+			width: 75%;
+			background: linear-gradient(120deg, colors.$main-color, colors.$light-gray);
 			color: colors.$white;
-			padding: 0.5rem 1rem;
+			padding: 0.8rem 1.5rem;
 			border: none;
-			border-radius: 0.25rem;
+			border-radius: 2rem;
+			text-transform: uppercase;
+			font-weight: 600;
+			text-align: center;
 			text-decoration: none;
-			transition: background-color 0.3s;
+			transition: all 0.3s ease-in-out;
+			box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 
 			&:hover {
-				background-color: colors.$light-gray;
+				background: linear-gradient(120deg, colors.$light-gray, colors.$main-color);
 				color: colors.$bg-color-dark;
+				transform: scale(1.05);
+				box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 			}
 		}
 	}
+
+	@media (min-width: 768px) {
+		.rental-offer {
+			flex: 1 1 calc(50% - 2rem); // Dwie kolumny na średnich ekranach
+			max-width: calc(50% - 2rem);
+		}
+	}
+
+	@media (min-width: 992px) {
+		.rental-offer {
+			flex: 1 1 calc(33.333% - 2rem); // Trzy kolumny na dużych ekranach
+			max-width: calc(33.333% - 2rem);
+		}
+	}
+}
+
+// =============================
+// MODAL
+// =============================
+
+.hidden {
+	display: none;
+}
+
+.photo-modal {
+	display: none;
+	position: fixed;
+	z-index: 1000;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	background: rgba(0, 0, 0, 0.8);
+	backdrop-filter: blur(5px);
+	animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+.photo-modal-content {
+	overflow: visible;
+	margin: 5% auto;
+	padding: 20px;
+	width: 90%;
+	max-width: 700px;
+	position: relative;
+	text-align: center;
+	background: colors.$light-gray;
+	border-radius: 10px;
+	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+	animation: slideUp 0.3s ease-in-out;
+}
+
+@keyframes slideUp {
+	from {
+		transform: translateY(50px);
+		opacity: 0;
+	}
+	to {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+.photo-modal-close {
+	position: absolute;
+	top: -20px;
+	right: -20px;
+	background-color: rgba(0, 0, 0, 0.7);
+	color: colors.$white;
+	font-size: 24px;
+	width: 40px;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	cursor: pointer;
+	z-index: 1002;
+	transition: all 0.3s ease-in-out;
+}
+
+.photo-modal-close:hover {
+	background-color: rgba(0, 0, 0, 0.9);
+	transform: scale(1.1);
+}
+
+.photo-modal-image {
+	width: 100%;
+	border-radius: 10px;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+	transition: transform 0.3s ease-in-out;
+
+	&:hover {
+		transform: scale(1.02);
+	}
+}
+
+.photo-modal-caption {
+	margin-top: 15px;
+	font-size: 1.1rem;
+	color: colors.$light-gray;
+	font-weight: 500;
+}
+
+.photo-modal-prev,
+.photo-modal-next {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 50px;
+	height: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: rgba(0, 0, 0, 0.5);
+	color: #fff;
+	border: none;
+	border-radius: 50%;
+	font-size: 1.5rem;
+	cursor: pointer;
+	z-index: 1001;
+	transition: all 0.3s ease-in-out;
+	opacity: 0.8;
+}
+
+.photo-modal-prev {
+	left: -60px;
+}
+
+.photo-modal-next {
+	right: -60px;
+}
+
+.photo-modal-prev:hover,
+.photo-modal-next:hover {
+	background-color: rgba(0, 0, 0, 0.8);
+	transform: translateY(-50%) scale(1.1);
+	opacity: 1;
+}
+
+.photo-modal-prev i,
+.photo-modal-next i {
+	font-size: 2rem;
+	transition: transform 0.3s ease-in-out;
+}
+
+.photo-modal-prev:hover i,
+.photo-modal-next:hover i {
+	transform: scale(1.2);
+}
+
+.photo-modal-thumbnails {
+	display: flex;
+	justify-content: center;
+	gap: 10px;
+	margin-top: 15px;
+}
+
+.photo-modal-thumbnail {
+	width: 60px;
+	height: 60px;
+	cursor: pointer;
+	border: 2px solid transparent;
+	transition: border-color 0.3s;
+	object-fit: cover;
+}
+
+.photo-modal-thumbnail:hover {
+	border-color: rgba(0, 0, 0, 0.5);
+}
+
+.photo-modal-thumbnail.active {
+	border-color: colors.$main-color;
 }
 
 // =============================
@@ -495,6 +712,8 @@ footer p {
 
 @media (min-width: 576px) {
 	.petrol-stations {
+		background: linear-gradient(120deg, colors.$white, colors.$light-gray);
+
 		&__box {
 			&-text {
 				width: 55%;
@@ -568,16 +787,49 @@ footer p {
 	}
 
 	.construction {
+		&__box {
+			flex-direction: row;
+			gap: 2rem;
+
+			&-img {
+				width: 50%;
+			}
+		}
+
 		&__text {
 			font-size: 1.5rem;
+			width: 50%;
+			text-align: left;
 		}
 	}
 
 	.rental-offers {
 		.rental-offer {
-			flex: 1 1 calc(50% - 1.5rem);
-			max-width: calc(50% - 1.5rem);
+			flex: 1 1 calc(50% - 2rem);
+			max-width: calc(50% - 2rem);
 		}
+	}
+}
+
+@media (max-width: 768px) {
+	.photo-modal-prev {
+		left: 10px;
+	}
+
+	.photo-modal-next {
+		right: 10px;
+	}
+
+	.photo-modal-prev:hover,
+	.photo-modal-next:hover {
+		background-color: rgba(0, 0, 0, 0.8);
+		transform: translateY(-50%) scale(1.05);
+		opacity: 1;
+	}
+
+	.photo-modal-prev i,
+	.photo-modal-next i {
+		font-size: 1.8rem;
 	}
 }
 
@@ -632,9 +884,16 @@ footer p {
 	.construction {
 		&__box {
 			flex-direction: row;
+			padding: 4rem;
+			gap: 3rem;
 
 			&-img {
 				width: 45vw;
+			}
+
+			&__text {
+				font-size: 1.4rem;
+				line-height: 2rem;
 			}
 		}
 
@@ -647,8 +906,8 @@ footer p {
 
 	.rental-offers {
 		.rental-offer {
-			flex: 1 1 calc(33.333% - 1.5rem);
-			max-width: calc(33.333% - 1.5rem);
+			flex: 1 1 calc(33.333% - 2rem);
+			max-width: calc(33.333% - 2rem);
 		}
 	}
 }
