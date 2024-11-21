@@ -60,8 +60,90 @@ nav {
 	z-index: 5;
 	transition: background-color 0.6s;
 
+	#nav-icon {
+		width: 60px;
+		height: 45px;
+		position: relative;
+		margin: auto 0 auto auto;
+		right: 0;
+		-webkit-transform: rotate(0deg);
+		-moz-transform: rotate(0deg);
+		-o-transform: rotate(0deg);
+		transform: rotate(0deg);
+		transform: scale(0.6);
+		-webkit-transition: 0.5s ease-in-out;
+		-moz-transition: 0.5s ease-in-out;
+		-o-transition: 0.5s ease-in-out;
+		transition: 0.5s ease-in-out;
+		cursor: pointer;
+	}
+
+	#nav-icon span {
+		display: block;
+		position: absolute;
+		height: 9px;
+		width: 100%;
+		background: colors.$main-color;
+		border-radius: 9px;
+		opacity: 1;
+		left: 0;
+		-webkit-transform: rotate(0deg);
+		-moz-transform: rotate(0deg);
+		-o-transform: rotate(0deg);
+		transform: rotate(0deg);
+		-webkit-transition: 0.25s ease-in-out;
+		-moz-transition: 0.25s ease-in-out;
+		-o-transition: 0.25s ease-in-out;
+		transition: 0.25s ease-in-out;
+	}
+
+	#nav-icon span:nth-child(1) {
+		top: 0px;
+	}
+
+	#nav-icon span:nth-child(2) {
+		top: 18px;
+	}
+
+	#nav-icon span:nth-child(3) {
+		top: 36px;
+	}
+
+	#nav-icon.open span:nth-child(1) {
+		top: 18px;
+		-webkit-transform: rotate(135deg);
+		-moz-transform: rotate(135deg);
+		-o-transform: rotate(135deg);
+		transform: rotate(135deg);
+	}
+
+	#nav-icon.open span:nth-child(2) {
+		opacity: 0;
+		left: -60px;
+	}
+
+	#nav-icon.open span:nth-child(3) {
+		top: 18px;
+		-webkit-transform: rotate(-135deg);
+		-moz-transform: rotate(-135deg);
+		-o-transform: rotate(-135deg);
+		transform: rotate(-135deg);
+	}
+
+	.nav-item {
+		opacity: 0;
+		transform: translateY(20px);
+		transition: opacity 0.5s ease, transform 0.5s ease;
+
+		&.show {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+
 	.navbar-toggler {
-		padding: 10px 15px;
+		padding: 15px;
+		width: 0;
 	}
 
 	.navbar-brand {
@@ -513,6 +595,14 @@ header.hero-img {
 	}
 
 	@media (min-width: 992px) {
+		nav {
+			.nav-item {
+				opacity: 1;
+				transform: translateY(0);
+				transition: none;
+			}
+		}
+
 		.rental-offer {
 			flex: 1 1 calc(33.333% - 2rem); // Trzy kolumny na dużych ekranach
 			max-width: calc(33.333% - 2rem);
