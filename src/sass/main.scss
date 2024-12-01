@@ -139,6 +139,26 @@ nav {
 			opacity: 1;
 			transform: translateY(0);
 		}
+
+		&::after,
+		&::before {
+			transition: 0.3s;
+		}
+
+		&::after {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			height: 3px;
+			width: 100%;
+			background-color: colors.$main-color;
+			transform: scaleX(0);
+		}
+
+		&:hover::after {
+			transform: scaleX(1);
+		}
 	}
 
 	.navbar-toggler {
@@ -170,7 +190,7 @@ nav {
 	.navbar-brand:hover,
 	.nav-link:focus,
 	.nav-link:hover {
-		color: colors.$main-color;
+		color: colors.$light-gray;
 	}
 }
 
@@ -775,7 +795,7 @@ header.hero-img {
 }
 
 .photo-modal-thumbnail.active {
-	border-color: colors.$main-color;
+	border-color: colors.$light-gray;
 }
 
 // =============================
