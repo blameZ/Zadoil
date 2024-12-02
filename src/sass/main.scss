@@ -84,7 +84,6 @@ nav {
 		height: 9px;
 		width: 100%;
 		background: colors.$main-color;
-		// border-radius: 9px;
 		opacity: 1;
 		left: 0;
 		-webkit-transform: rotate(0deg);
@@ -296,26 +295,42 @@ header.hero-img {
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		padding: 1.5em;
-		gap: 1.5em;
+		gap: 2em;
+
+		&-img {
+			overflow: hidden;
+		}
+
+		&-text {
+			width: 100%;
+		}
 	}
 
 	&__img {
 		width: 100%;
-		// border-radius: variables.$image-border-radius;
+		height: 100%;
 	}
 
 	&__title {
-		margin-bottom: 0.5em;
+		padding-bottom: 0.7em;
 		font-size: 1.8rem;
+	}
+
+	&__details {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
 	}
 
 	iframe {
 		width: 100%;
 		height: 250px;
 		border: none;
-		// border-radius: variables.$image-border-radius;
 		box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+	}
+
+	p {
+		padding: 0.2em;
 	}
 }
 
@@ -335,7 +350,6 @@ header.hero-img {
 	}
 
 	&__img {
-		// border-radius: variables.$image-border-radius;
 		width: 100%;
 	}
 
@@ -374,7 +388,7 @@ header.hero-img {
 		left: 0;
 		width: 100%;
 		height: 100%;
-		background-color: rgba(0, 0, 0, 0.6);
+		background-color: rgba(0, 0, 0, 0.7);
 		z-index: -5;
 	}
 }
@@ -391,29 +405,6 @@ header.hero-img {
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		padding: 3rem;
-		gap: 2rem;
-		// border-radius: 10px;
-		background: colors.$white;
-
-		&-img {
-			width: 100%;
-			height: auto;
-			// border-radius: 1rem;
-			overflow: hidden;
-
-			img {
-				width: 100%;
-				height: auto;
-				object-fit: cover;
-				transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
-
-				&:hover {
-					transform: scale(1.05);
-					filter: brightness(1.1);
-				}
-			}
-		}
 	}
 
 	&__text {
@@ -423,13 +414,10 @@ header.hero-img {
 		text-align: center;
 		padding: 1rem 2rem;
 		order: 1;
-		background: rgba(0, 0, 0, 0.05);
-		// border-radius: 10px;
 	}
 
 	&__img {
-		margin-bottom: 1rem;
-		// border-radius: 10px;
+		height: 100%;
 		width: 100%;
 		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 	}
@@ -455,7 +443,6 @@ header.hero-img {
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
-			// border-radius: variables.$image-border-radius;
 			transition: transform 0.3s;
 
 			&:hover {
@@ -537,15 +524,8 @@ header.hero-img {
 		max-width: 100%;
 		background-color: colors.$white;
 		border: 1px solid rgba(0, 0, 0, 0.1);
-		// border-radius: 1.5rem;
 		overflow: hidden;
-		transition: transform 0.4s ease, box-shadow 0.4s ease;
 		box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-
-		&:hover {
-			transform: translateY(-10px) scale(1.02);
-			box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-		}
 
 		&__img {
 			width: 100%;
@@ -601,7 +581,6 @@ header.hero-img {
 			&:hover {
 				background: linear-gradient(120deg, colors.$light-gray, colors.$main-color);
 				color: colors.$bg-color-dark;
-				transform: scale(1.05);
 				box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 			}
 		}
@@ -665,12 +644,11 @@ header.hero-img {
 	overflow: visible;
 	margin: 5% auto;
 	padding: 20px;
-	width: 90%;
-	max-width: 700px;
+	width: 80%;
+	max-width: 80%;
 	position: relative;
 	text-align: center;
 	background: colors.$light-gray;
-	// border-radius: 10px;
 	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 	animation: slideUp 0.3s ease-in-out;
 }
@@ -824,20 +802,8 @@ footer p {
 	.petrol-stations {
 		background: linear-gradient(120deg, colors.$white, colors.$light-gray);
 
-		&__box {
-			&-text {
-				width: 55%;
-
-				&--right {
-					text-align: right;
-				}
-			}
-
-			&-img {
-				&--right {
-					order: 1;
-				}
-			}
+		&__details {
+			flex-direction: row;
 		}
 	}
 
@@ -919,6 +885,11 @@ footer p {
 			max-width: calc(50% - 2rem);
 		}
 	}
+
+	.photo-modal-content {
+		width: 60%;
+		max-width: 60%;
+	}
 }
 
 @media (max-width: 768px) {
@@ -958,12 +929,20 @@ footer p {
 				display: flex;
 				flex-direction: column;
 				justify-content: flex-end;
-				margin-bottom: 2.5em;
+				width: 50%;
+				text-align: right;
+			}
+
+			&-img {
+				&--right {
+					order: 1;
+				}
 			}
 		}
 
 		&__title {
 			font-size: 3.6rem;
+			margin-bottom: 1rem;
 		}
 
 		&__text {
@@ -972,7 +951,11 @@ footer p {
 
 		&__img {
 			margin-bottom: 0;
-			max-height: 300px;
+			max-height: 500px;
+		}
+
+		iframe {
+			height: 200px;
 		}
 	}
 
@@ -998,7 +981,7 @@ footer p {
 			gap: 3rem;
 
 			&-img {
-				width: 45vw;
+				width: 40vw;
 			}
 
 			&__text {
@@ -1008,7 +991,7 @@ footer p {
 		}
 
 		&__text {
-			width: 55vw;
+			width: 40vw;
 			font-size: 1.4em;
 			order: 0;
 		}
