@@ -280,6 +280,7 @@ header.hero-img {
 	background: linear-gradient(120deg, colors.$light-gray, colors.$white);
 
 	h3 {
+		margin-right: auto;
 		text-transform: capitalize;
 		font-size: 1.7rem;
 		transition: color 0.3s;
@@ -320,6 +321,21 @@ header.hero-img {
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
+
+		.station-info {
+			display: flex;
+			flex-direction: column;
+			justify-content: start;
+			align-items: start;
+			text-align: left;
+		}
+
+		.station-amenities {
+			display: flex;
+			flex-direction: column;
+			justify-content: start;
+			align-items: start;
+		}
 	}
 
 	iframe {
