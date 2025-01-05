@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadoil</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4/dist/fancybox.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="./dist/css/main.min.css">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/7979a03bd9.js" crossorigin="anonymous"></script>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#navId">
+
+    <nav id="navId" class="navbar navbar-expand-lg position-fixed top-0 w-100 py-3">
+    <div class="container">
+        <a class="nav-link navbar-brand" href="./index.html#"><img src="./dist/img/zadoil_logo_color_01.png"
+                alt="Logo firmy Zadoil">Zadoil</a>
+        <div id="nav-icon" class="navbar-toggler">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" id="nav-rental" aria-current="page" href="./rental.html">Wynajem</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="nav-rental" aria-current="page" href="./sales.html">Sprzedaż</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="./index.html#petrol-stations">Stacje paliw</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="./index.html#fuel-distribution">Dystrybucja paliw</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="./index.html#construction">Budownictwo</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="./index.html#contact">Kontakt</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+    <section id="machine-sales" class="offers">
+        <div class="container">
+
+            <h2 class="section-title">OFERTA SPRZEDAŻOWA MASZYN</h2>
+            <div class="underline"></div>
+
+            <div class="offers__grid">
+
+                <!-- 1. MAX HOLDER C 345 -->
+                <div class="offer" data-aos="fade-up">
+                    <div class="offer__img">
+                        <a href="./dist/img/sales/maxholder.jpg" data-fancybox="gallery1">
+                            <img src="./dist/img/sales/maxholder.jpg" alt="Zdjęcie Max Holder C 345"
+                                class="offer__image">
+                        </a>
+                    </div>
+
+                    <h3 class="offer__title">Max Holder C 345</h3>
+
+                    <div class="offer__price-row">
+                        <p class="offer__price"><strong>Cena:</strong> 107 000 PLN</p>
+                        <button class="offer__toggle" data-details-toggle="details-maxholder"
+                            onclick="toggleDetails('details-maxholder')"><i class="fa-solid fa-plus"></i>
+                        </button>
+                    </div>
+
+                    <div class="offer__description">
+                        <strong>SZCZEGÓŁY:</strong>
+                        <ul>
+                            <li>Zarejestrowany</li>
+                            <li>2010 rok</li>
+                            <li>3035 MTH</li>
+                            <li>Masa własna: 1390 kg</li>
+                            <li>Silnik Kubota 1500, 45 KM</li>
+                            <li>Napęd 4x4</li>
+                            <li class="blue-text">Kompletny zimowy zestaw komunalny w zestawie</li>
+                        </ul>
+                    </div>
+
+                    <div class="offer__details" id="details-maxholder" aria-expanded="false">
+                        <ul>
+                            <li>Skrzynia HST</li>
+                            <li>TUZ tył i przód</li>
+                            <li>Wałek przekaźnikowy tył i przód, wyjścia hydrauliczne tył x 5, przód x 4</li>
+                            <li>Zaczep tylny górny automatyczny</li>
+                            <li>Dolny kulka</li>
+                            <li>Piaskarko-solarka Hydromann (napęd i sterowanie hydrauliczne)</li>
+                            <li>Pług odśnieżny Pronar PV2100</li>
+                        </ul>
+                    </div>
+
+                    <div class="offer-info">
+                        <p>W celu zakupu prosimy o <a href="sales.html#contact">kontakt</a></p>
+                    </div>
+                </div>
+                <!-- /1. MAX HOLDER C 345 -->
+
+
+                <!-- 2. KOMMATSU PW 98MR -->
+                <div class="offer" data-aos="fade-up">
+                    <div class="offer__img">
+                        <a href="./dist/img/sales/kommatsu.jpg" data-fancybox="gallery2">
+                            <img src="./dist/img/sales/kommatsu.jpg" alt="Zdjęcie koparki Kommatsu PW 98MR"
+                                class="offer__image">
+                        </a>
+                    </div>
+
+                    <h3 class="offer__title">Kommatsu PW 98MR</h3>
+
+                    <div class="offer__price-row">
+                        <p class="offer__price"><strong>Cena:</strong> 233 999 PLN</p>
+                        <button class="offer__toggle" data-details-toggle="details-komatsu"
+                            onclick="toggleDetails('details-komatsu')"><i class="fa-solid fa-plus"></i>
+                        </button>
+                    </div>
+
+                    <div class="offer__description">
+                        <strong>SZCZEGÓŁY:</strong>
+                        <ul>
+                            <li>Łyżki podsiębierne 35 cm, 60 cm, 80 cm</li>
+                            <li>Łyżka skarpowa hydrauliczna 160 cm</li>
+                            <li>Łyżka ładowarkowa (krokodyl) 190 cm</li>
+                            <li>Widły</li>
+                        </ul>
+                    </div>
+
+                    <div class="offer__details" id="details-komatsu" aria-expanded="false">
+                        <ul>
+                            <li>Rok produkcji: 2013</li>
+                            <li>Motogodziny: 5800 mth</li>
+                            <li>Moc: 68 KM</li>
+                            <li>Silnik EU Stage V o niskim zużyciu paliwa</li>
+                            <li>Doskonała łatwość sterowania</li>
+                            <li>Sterowanie czterema kołami</li>
+                            <li>Waga 10 t</li>
+                            <li>Pojemność czerpaka 0.282 m³</li>
+                            <li>Wysięgnik VA</li>
+                            <li>Długość transportowa: 6.65 m</li>
+                            <li>Szerokość transportowa: 2.35 m</li>
+                            <li>Wysokość transportowa: 3.995 m</li>
+                            <li>Maksymalny zasięg: 7.29 m</li>
+                            <li>Pojemność łyżki: 0.11 - 0.28 m³</li>
+                        </ul>
+                    </div>
+                    <div class="offer-info">
+                        <p>W celu zakupu prosimy o <a href="sales.html#contact">kontakt</a></p>
+                    </div>
+                </div>
+                <!-- /2. KOMMATSU PW 98MR -->
+
+
+                <!-- 3. DEUTZ-FAHR 4080E -->
+                <div class="offer" data-aos="fade-up">
+                    <div class="offer__img">
+                        <a href="./dist/img/sales/deutz-fahr.jpg" data-fancybox="gallery3">
+                            <img src="./dist/img/sales/deutz-fahr.jpg" alt="Zdjęcie ciągnika Deutz-Fahr"
+                                class="offer__image">
+                        </a>
+                    </div>
+
+                    <h3 class="offer__title">Deutz-Fahr 4080E</h3>
+
+                    <div class="offer__price-row">
+                        <p class="offer__price"><strong>Cena:</strong> 152 000 PLN</p>
+                        <button class="offer__toggle" data-details-toggle="details-tractor"
+                            onclick="toggleDetails('details-tractor')"><i class="fa-solid fa-plus"></i>
+                        </button>
+                    </div>
+
+                    <div class="offer__description">
+                        <strong>SZCZEGÓŁY:</strong>
+                        <ul>
+                            <li>Rok produkcji: 2022</li>
+                            <li>Motogodziny: 5 mth</li>
+                            <li>4x4</li>
+                            <li>Moc: 55 kW / 75 KM</li>
+                        </ul>
+                    </div>
+
+                    <div class="offer__details" id="details-tractor" aria-expanded="false">
+                        <ul>
+                            <li>Skrzynia 15x15 40 km/h</li>
+                            <li>Rewers mechaniczny</li>
+                            <li>2 pary wyjść hydraulicznych</li>
+                            <li>Wyjście na hamulec hydrauliczny</li>
+                            <li>Podnośnik wzmacniany</li>
+                            <li>Klimatyzacja</li>
+                            <li>Wałek przekaźnikowy 540/75</li>
+                        </ul>
+                    </div>
+
+                    <div class="offer-info">
+                        <p>W celu zakupu prosimy o <a href="sales.html#contact">kontakt</a></p>
+                    </div>
+                </div>
+                <!-- /3. DEUTZ-FAHR 4080E -->
+
+
+                <!-- 4. NEW HOLLAND E19C -->
+                <div class="offer" data-aos="fade-up">
+                    <div class="offer__img">
+                        <a href="./dist/img/sales/newholland_e19c.jpg" data-fancybox="gallery4">
+                            <img src="./dist/img/sales/newholland_e19c.jpg" alt="Zdjęcie koparki New Holland e19c"
+                                class="offer__image">
+                        </a>
+                    </div>
+
+                    <h3 class="offer__title">New Holland E19C</h3>
+
+                    <div class="offer__price-row">
+                        <p class="offer__price"><strong>Cena:</strong> 113 999 PLN</p>
+                        <button class="offer__toggle" data-details-toggle="details-minikoparka"
+                            onclick="toggleDetails('details-minikoparka')"><i class="fa-solid fa-plus"></i>
+                        </button>
+                    </div>
+
+                    <p class="offer__description">
+                        <strong>SZCZEGÓŁY:</strong>
+                    <ul>
+                        <li>Rok produkcji: 2020</li>
+                        <li>Motogodziny: 60 mth</li>
+                    </ul>
+                    </p>
+
+                    <div class="offer__details" id="details-minikoparka" aria-expanded="false">
+                        <ul>
+                            <li>Hydraulicznie regulowana szerokość rozstawu gąsienic 100-130 cm</li>
+                            <li>Regulowana szerokość lemiesza</li>
+                            <li>Łyżki 30, 40, 60 cm oraz skarpówkę 100 cm</li>
+                            <li>Szybkozłącze półautomatyczne</li>
+                            <li>Linia pod hydrauliczne szybkozłącze sterowane z kabiny</li>
+                            <li>Dodatkowa linia hydrauliczna pod młota lub inne narzędzia</li>
+                            <li>Nagrzewnica</li>
+                            <li>Radio</li>
+                        </ul>
+                    </div>
+
+                    <div class="offer-info">
+                        <p>W celu zakupu prosimy o <a href="sales.html#contact">kontakt</a></p>
+                    </div>
+                </div>
+                <!-- /4. NEW HOLLAND E19C -->
+
+
+                <!-- 5. GLEBOGRYZARKA HUSQVARNA -->
+                <div class="offer" data-aos="fade-up">
+                    <div class="offer__img">
+                        <a href="./dist/img/sales/glebogryzarka.jpg" data-fancybox="gallery5">
+                            <img src="./dist/img/sales/glebogryzarka.jpg" alt="Zdjęcie glebogryzarki husqvarna"
+                                class="offer__image">
+                        </a>
+                    </div>
+
+                    <h3 class="offer__title">Glebogryzarka Husqvarna</h3>
+
+                    <div class="offer__price-row">
+                        <p class="offer__price"><strong>Cena:</strong> 4 400 PLN</p>
+                    </div>
+
+                    <div class="offer__description">
+                        <strong>SZCZEGÓŁY:</strong>
+                        <ul>
+                            <li>Solidna konstrukcja zapewniająca trwałość przez lata użytkowania</li>
+                            <li>Doskonała do rozbijania zbitej gleby i mieszania nawozów</li>
+                            <li>Łatwa w obsłudze, nawet dla początkujących ogrodników</li>
+                            <li>Kompaktowa budowa, umożliwiająca przechowywanie w niewielkich pomieszczeniach</li>
+                        </ul>
+                    </div>
+
+
+                    <div class="offer-info">
+                        <p>W celu zakupu prosimy o <a href="sales.html#contact">kontakt</a></p>
+                    </div>
+                </div>
+                <!-- /5. GLEBOGRYZARKA HUSQVARNA -->
+
+
+                <!-- 6. WALEC AMMANN -->
+                <div class="offer" data-aos="fade-up">
+                    <div class="offer__img">
+                        <a href="./dist/img/sales/walec_ammann_2.jpg" data-fancybox="gallery6">
+                            <img src="./dist/img/sales/walec_ammann_2.jpg" alt="Zdjęcie walca ammann"
+                                class="offer__image">
+                        </a>
+                    </div>
+
+                    <h3 class="offer__title">Walec Ammann</h3>
+
+                    <div class="offer__price-row">
+                        <p class="offer__price"><strong>Cena:</strong> 52 999 PLN</p>
+                        <button class="offer__toggle" data-details-toggle="details-ammann"
+                            onclick="toggleDetails('details-ammann')"><i class="fa-solid fa-plus"></i>
+                        </button>
+                    </div>
+
+                    <div class="offer__description">
+                        <strong>SZCZEGÓŁY:</strong>
+                        <ul>
+                            <li>Rok produkcji: 2012</li>
+                            <li>Motogodziny: 1860 mth</li>
+                            <li>Moc: 32 KM</li>
+                            <li>Waga: 2660 kg</li>
+                        </ul>
+                    </div>
+
+                    <div class="offer__details" id="details-ammann" aria-expanded="false">
+                        <ul>
+                            <li>Silnik Yanmar</li>
+                            <li>Zbiornik na wodę do zraszania podłoża</li>
+                            <li>Wibracja na 2 bębny lub na 1</li>
+                            <li>Zraszanie na 2 bębny</li>
+                            <li>Siedzenie operatora</li>
+                            <li>Oświetlenie</li>
+                        </ul>
+                    </div>
+                    <div class="offer-info">
+                        <p>W celu zakupu prosimy o <a href="sales.html#contact">kontakt</a></p>
+                    </div>
+                </div>
+                <!-- /6. WALEC AMMANN -->
+
+
+                <!-- 7. LAWETA EDER -->
+                <div class="offer" data-aos="fade-up">
+                    <div class="offer__img">
+                        <a href="./dist/img/sales/walec_ammann_2.jpg" data-fancybox="gallery7">
+                            <img src="./dist/img/sales/walec_ammann_2.jpg" alt="Zdjęcie lawety Eder"
+                                class="offer__image">
+                        </a>
+                    </div>
+
+                    <h3 class="offer__title">Laweta Eder</h3>
+                    <div class="offer__price-row">
+                        <p class="offer__price"><strong>Cena:</strong> 9 900 PLN</p>
+                        <button class="offer__toggle" data-details-toggle="details-laweta"
+                            onclick="toggleDetails('details-laweta')"><i class="fa-solid fa-plus"></i>
+                        </button>
+                    </div>
+
+                    <div class="offer__description">
+                        <strong>SZCZEGÓŁY:</strong>
+                        <ul>
+                            <li>Rok produkcji: 1997</li>
+                            <li>Długość platformy: 430 cm</li>
+                            <li>Szerokość platformy: 205 cm</li>
+                            <li>DMC: 2700 kg</li>
+                            <li>Masa własna: 515 kg</li>
+                            <li>Ładowność: 2185 kg</li>
+                        </ul>
+                    </div>
+
+                    <div class="offer__details" id="details-laweta" aria-expanded="false">
+                        <ul>
+                            <li>Opony: 195/55-R10</li>
+                            <li>Nie wymaga najazdów</li>
+                            <li>Niezawodne pochylenie za pomocą śruby</li>
+                            <li>Wyciągarka na linkę z przekładnią</li>
+                        </ul>
+                    </div>
+
+                    <div class="offer-info">
+                        <p>W celu zakupu prosimy o <a href="sales.html#contact">kontakt</a></p>
+                    </div>
+                </div>
+                <!-- /7. LAWETA EDER -->
+
+
+                <!-- 8. ODŚNIEŻARKA HECHT -->
+                <div class="offer" data-aos="fade-up">
+                    <div class="offer__img">
+                        <a href="./dist/img/sales/odsniezarka_hecht.jpg" data-fancybox="gallery8">
+                            <img src="./dist/img/sales/odsniezarka_hecht.jpg" alt="Zdjęcie odśnieżarki Hecht"
+                                class="offer__image">
+                        </a>
+                    </div>
+
+                    <h3 class="offer__title">Odśnieżarka Hecht</h3>
+                    <div class="offer__price-row">
+                        <p class="offer__price"><strong>Cena:</strong> 4 999 PLN</p>
+                    </div>
+
+                    <div class="offer__description">
+                        <em>Brak dodatkowych danych technicznych. Skontaktuj się z nami, aby dowiedzieć się więcej!</em>
+                    </div>
+
+                    <div class="offer-info">
+                        <p>W celu zakupu prosimy o <a href="sales.html#contact">kontakt</a></p>
+                    </div>
+                </div>
+
+                <!-- /8. ODŚNIEŻARKA HECHT -->
+                <div class="offer" data-aos="fade-up">
+                    <div class="offer__img">
+                        <a href="./dist/img/sales/walec_kolkowy_demag.jpg" data-fancybox="gallery9">
+                            <img src="./dist/img/sales/walec_kolkowy_demag.jpg" alt="Zdjęcie walca okołkowanego Demag"
+                                class="offer__image">
+                        </a>
+                    </div>
+
+                    <h3 class="offer__title">Walec okołkowany Demag</h3>
+                    <div class="offer__price-row">
+                        <p class="offer__price"><strong>Cena:</strong> 8 999 PLN</p>
+                    </div>
+
+                    <div class="offer__description">
+                        <strong>SZCZEGÓŁY:</strong>
+                        <ul>
+                            <li>Waga: 1,2 t</li>
+                            <li>Rok produkcji: 1990</li>
+                            <li>Motogodziny: 2000 mth</li>
+                        </ul>
+                    </div>
+
+                    <div class="offer-info">
+                        <p>W celu zakupu prosimy o <a href="sales.html#contact">kontakt</a></p>
+                    </div>
+                </div>
+                <!-- /9. WALEC OKOŁKOWANY DEMAG -->
+
+
+                <!-- 10. ZBIORNIK 5000L IBUSO -->
+                <div class="offer" data-aos="fade-up">
+                    <div class="offer__img">
+                        <a href="./dist/img/sales/zbiornik5000l.jpg" data-fancybox="gallery10">
+                            <img src="./dist/img/sales/zbiornik5000l.jpg" alt="Zdjęcie zbiornika 5000L"
+                                class="offer__image">
+                        </a>
+                    </div>
+
+                    <h3 class="offer__title">Zbiornik 5000L IBUSO</h3>
+                    <div class="offer__price-row">
+                        <p class="offer__price"><strong>Cena:</strong> 8 900 PLN</p>
+                    </div>
+
+                    <div class="offer__description">
+                        Zapraszamy do zakupu zbiornika IBUSO.
+                    </div>
+
+                    <div class="offer-info">
+                        <p>W celu zakupu prosimy o <a href="sales.html#contact">kontakt</a></p>
+                    </div>
+                </div>
+                <!-- /10. ZBIORNIK 5000L IBUSO -->
+
+
+                <!-- 11. ZBIORNIK 2500L IBUSO -->
+                <div class="offer" data-aos="fade-up">
+                    <div class="offer__img">
+                        <a href="./dist/img/sales/zbiornik2500l.jpg" data-fancybox="gallery11">
+                            <img src="./dist/img/sales/zbiornik2500l.jpg" alt="Zdjęcie zbiornika 2500L"
+                                class="offer__image">
+                        </a>
+                    </div>
+
+                    <h3 class="offer__title">Zbiornik 2500L IBUSO</h3>
+                    <div class="offer__price-row">
+                        <p class="offer__price"><strong>Cena:</strong> 6 900 PLN</p>
+                    </div>
+
+                    <div class="offer__description">
+                        Zapraszamy do zakupu zbiornika IBUSO.
+                    </div>
+
+                    <div class="offer-info">
+                        <p>W celu zakupu prosimy o <a href="sales.html#contact">kontakt</a></p>
+                    </div>
+                </div>
+                <!-- /11. ZBIORNIK 2500L IBUSO -->
+
+            </div>
+        </div>
+    </section>
+
+
+    <section id="contact" class="contact py-5 bg-light">
+    <h2 class="section-title">kontakt</h2>
+    <div class="underline"></div>
+
+    <div class="container contact-us text-center">
+        <div class="row">
+            <div class="col-lg-6 col-sm-12 order-1" data-aos="fade-in">
+                <div class="contact-item">
+                    <div class="contact-title">
+                        <p>główna siedziba</p>
+                    </div>
+                    <div class="contact-text">
+                        <p><i class="fa-solid fa-location-dot"></i> 34-220 Białka</p>
+                        <p><i class="fa-solid fa-mobile-screen"></i> +48 509 397 894</p>
+                        <p><i class="fa-solid fa-phone"></i> +48 338 773 673</p>
+                        <p><i class="fa-regular fa-envelope"></i> stacja@zadoil.pl</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-sm-12 order-0 order-lg-1" data-aos="fade-in">
+                <div class="contact-item">
+                    <div class="contact-title">
+                        <p>social media</p>
+                    </div>
+                    <div class="contact-text">
+                        <div class="social-media__box">
+                            <a href="https://www.facebook.com/share/17nteQUMBK/"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://www.instagram.com/maszyny_zadoil?igsh=d3d0cDFnc2Q5ZmMz"><i
+                                    class="fab fa-instagram"></i></a>
+                            <a href="https://www.tiktok.com/@_zadoil?_t=8rS3nW353DS&_r=1"><i
+                                    class="fab fa-tiktok"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; <span id="current-year"></span> Zadoil. Wszelkie prawa zastrzeżone. | Powered by BartIt</p>
+</footer>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./dist/js/aos.min.js"></script>
+    <script src="./dist/js/slick.min.js"></script>
+    <script src="./dist/js/script.min.js"></script>
+    <script src="./dist/js/navButton.min.js"></script>
+    <script src="./dist/js/sales.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4/dist/fancybox.umd.js"></script>
+
+</body>
+
+</html>
