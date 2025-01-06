@@ -37,6 +37,7 @@ section {
 
 ul {
 	margin-bottom: 0;
+	list-style-type: square;
 }
 
 .blue-text {
@@ -194,6 +195,31 @@ nav {
 	.nav-link:focus,
 	.nav-link:hover {
 		color: colors.$light-gray;
+	}
+}
+
+.link {
+	position: relative;
+	display: inline-block;
+
+	&::after,
+	&::before {
+		transition: 0.3s;
+	}
+
+	&::after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		height: 3px;
+		width: 100%;
+		background-color: colors.$main-color;
+		transform: scaleX(0);
+	}
+
+	&:hover::after {
+		transform: scaleX(1);
 	}
 }
 
@@ -444,6 +470,42 @@ header.hero-img {
 }
 
 // =============================
+// PARTNER
+// ============================
+
+.partner {
+	background: linear-gradient(120deg, colors.$light-gray, colors.$white);
+
+	&__box {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__text {
+		font-size: 1.2rem;
+		line-height: 1.8em;
+		color: rgba(0, 0, 0, 0.8);
+		text-align: center;
+		padding: 2rem 2rem;
+		order: 1;
+	}
+
+	&__img {
+		height: 100%;
+		width: 100%;
+	}
+
+	a {
+		margin: 0.3rem;
+		color: colors.$main-color-dark;
+		font-size: 1.8rem;
+		text-decoration: none;
+	}
+}
+
+// =============================
 // MACHINERY-SALES
 // =============================
 
@@ -538,13 +600,23 @@ header.hero-img {
 	.offer {
 		display: flex;
 		flex-direction: column;
-		align-items: left;
+		align-items: flex-start;
 		flex: 1 1 100%;
 		max-width: 100%;
 		background-color: colors.$white;
 		border: 1px solid rgba(0, 0, 0, 0.1);
 		overflow: hidden;
 		box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+
+		&__video-link {
+			margin: 0.8rem auto;
+			text-align: center;
+
+			a {
+				color: colors.$main-color;
+				text-decoration: none;
+			}
+		}
 
 		&__img {
 			width: 100%;
@@ -586,7 +658,7 @@ header.hero-img {
 			width: 100%;
 			text-align: left;
 			color: colors.$main-color-dark;
-			font-size: 1.2rem;
+			font-size: 1.3rem;
 			font-weight: 500;
 
 			strong {
@@ -630,15 +702,21 @@ header.hero-img {
 		}
 
 		&__description {
+			strong {
+				margin: 1rem 1.5rem;
+			}
+
 			font-size: 1rem;
-			margin: 0 1.1rem;
+			margin: 0 1.5rem;
+			padding: 1rem 1rem 0 0;
 			color: rgba(0, 0, 0, 0.7);
 			line-height: 1.8;
 			text-align: left;
 		}
 
 		&__details {
-			margin: 0 1.1rem 1rem;
+			margin: 0 1.5rem 1rem;
+			padding: 0 1rem 1rem 0;
 			max-height: 0;
 			overflow: hidden;
 			transition: max-height 0.3s ease-in-out;
@@ -724,6 +802,12 @@ footer p {
 			line-height: 2.2em;
 		}
 	}
+
+	.partner {
+		&__text {
+			line-height: 2.2em;
+		}
+	}
 }
 
 @media (min-width: 768px) {
@@ -769,6 +853,23 @@ footer p {
 	}
 
 	.construction {
+		&__box {
+			flex-direction: row;
+			gap: 2rem;
+
+			&-img {
+				width: 50%;
+			}
+		}
+
+		&__text {
+			font-size: 1.5rem;
+			width: 50%;
+			text-align: left;
+		}
+	}
+
+	.partner {
 		&__box {
 			flex-direction: row;
 			gap: 2rem;
@@ -859,6 +960,29 @@ footer p {
 	}
 
 	.construction {
+		&__box {
+			flex-direction: row;
+			padding: 4rem;
+			gap: 3rem;
+
+			&-img {
+				width: 40vw;
+			}
+
+			&__text {
+				font-size: 1.4rem;
+				line-height: 2rem;
+			}
+		}
+
+		&__text {
+			width: 40vw;
+			font-size: 1.4em;
+			order: 0;
+		}
+	}
+
+	.partner {
 		&__box {
 			flex-direction: row;
 			padding: 4rem;
