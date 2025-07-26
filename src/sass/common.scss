@@ -282,44 +282,18 @@ header.hero-img {
 	overflow: hidden;
 
 	&__description {
-		padding: 1.5rem;
-		color: #333;
-		font-family: 'Segoe UI', sans-serif;
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
-		flex-grow: 1;
-
-		&-paragraph {
-			text-align: center;
-			line-height: 2rem;
-			color: colors.$text-color;
-
-			&--large {
-				font-size: 1.5rem;
-				font-weight: 300;
-			}
-		}
-
 		p {
-			margin: 0 0 1rem;
-			line-height: 1.6;
-			font-size: 1rem;
-
-			&:first-of-type {
-				font-weight: 600;
-				font-size: 1.2rem;
-				margin-bottom: 0.75rem;
-				color: #222;
-			}
-
-			&:last-of-type {
-				margin-bottom: 0;
-			}
+			padding: 1rem 2rem;
+			text-align: center;
+			font-size: 1.2rem;
+			font-weight: 500;
+			line-height: 1.8em;
+			color: rgba(0, 0, 0, 0.7);
 		}
 
 		a {
-			color: colors.$text-color;
+			font-weight: 600;
+			color: colors.$main-color;
 			text-decoration: none;
 		}
 	}

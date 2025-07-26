@@ -46,8 +46,11 @@
 
 	&__description {
 		p {
+			padding: 1rem 2rem;
 			text-align: center;
-			line-height: 2rem;
+			font-size: 1.2rem;
+			font-weight: 500;
+			line-height: 1.8em;
 			color: colors.$text-color;
 		}
 	}
@@ -77,6 +80,7 @@
 
 		&--active {
 			font-weight: bold;
+			box-shadow: 0 2px 6px colors.$bg-color-dark;
 		}
 	}
 }
@@ -95,6 +99,10 @@
 	}
 
 	&__item {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
 		padding-top: 1.5rem;
 		color: colors.$text-color;
 		font-weight: 300;
@@ -107,6 +115,8 @@
 			&--large {
 				text-transform: uppercase;
 				font-size: 1.7rem;
+				font-weight: bold;
+				color: colors.$bg-color-dark;
 			}
 		}
 

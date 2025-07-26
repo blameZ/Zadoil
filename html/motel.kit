@@ -5,18 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Motel Zadoil</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./dist/css/common.min.css">
     <link rel="stylesheet" href="./dist/css/motel.min.css">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap"
-        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/7979a03bd9.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -32,28 +31,32 @@
             </div>
         </div>
         <div class="motel-hero__shadow"></div>
-        <a href="#aboutus"><i class="fa-solid fa-chevron-down"></i></a>
+        <a href="#rooms"><i class="fa-solid fa-chevron-down"></i></a>
     </header>
 
-    <section class="cards" id="pokoje">
+    <section class="cards" id="rooms">
         <div class="decor-left"></div>
         <div class="decor-right"></div>
         <div class="container">
             <h2 class="section-title">Pokoje</h2>
-            <div class="cards__description">
-                <p class="cards__description-paragraph">Witamy w naszym motelu położonym w malowniczej miejscowości
-                    Białka, tuż obok Makowa
+            <div class="underline"></div>
+            <div class="cards__description" data-aos="fade-up">
+                <p>Witamy w naszym motelu położonym w malowniczej miejscowości
+                    <span class="blue-text">Białka</span>, tuż obok Makowa
                     Podhalańskiego. <br />
-                    Nasz obiekt oferuje komfortowe zakwaterowanie dla podróżnych w bliskiej odległości od urokliwej
-                    Zawoi. <br /> <br /> Zapewniamy 13 przytulnych pokoi, nasza oferta obejmuje pokoje 1, 2 oraz 3
-                    osobowe.<br /> <br />
+                    Nasz obiekt oferuje komfortowe w bliskiej odległości od urokliwej
+                    Zawoi. <br /> <br /> Zapewniamy 13 przytulnych pokoi, nasza oferta obejmuje pokoje <span
+                        class="blue-text">2 oraz 3
+                        osobowe. </span><br /> <br />
                     Nie ważne, czy podróżujesz w celach biznesowych, czy też wypoczywasz z rodziną lub przyjaciółmi,
                     nasz motel zapewni Ci spokojną atmosferę i komfortowy wypoczynek.<br /> <br />
-                    Serdecznie zapraszamy do odwiedzenia naszego motelu w Białce i cieszenia się wspaniałymi atrakcjami
-                    okolicznych miejscowości, w tym urokliwej Zawoi.</p>
+                    <span class="blue-text">Serdecznie zapraszamy</span> do odwiedzenia naszego motelu w Białce i
+                    cieszenia się wspaniałymi atrakcjami
+                    okolicznych miejscowości, w tym urokliwej Zawoi.
+                </p>
             </div>
             <div class="cards__offer">
-                <div class="cards__item">
+                <div class="cards__item" data-aos="fade-right">
                     <div class="cards__image">
                         <div class="cards__image__img">
                             <img src="./dist/img/pokoj-2.jpg" alt="Pokój 2-osobowy">
@@ -89,7 +92,7 @@
                     </div>
                 </div>
 
-                <div class="cards__item">
+                <div class="cards__item" data-aos="fade-left">
                     <div class="cards__image">
                         <div class="cards__image__img">
                             <img src="./dist/img/pokoj-3.jpg" alt="Pokój 3-osobowy">
@@ -124,9 +127,10 @@
 
     <!-- @include 'amenities.kit' -->
 
-    <section class="additional-info">
+    <section class="additional-info bg-light" data-aos="fade-down">
         <div class="container">
             <h2 class="section-title">Informacje dodatkowe</h2>
+            <div class="underline"></div>
             <ul class="additional-info__list">
                 <li class="additional-info__item">
                     <i class="fa-solid fa-building-circle-check"></i>Zameldowanie w Motelu - 14:00. Wymeldowanie -
@@ -147,16 +151,18 @@
         </div>
     </section>
 
-    <section class="attractions" id="tourist-attraction">
+    <section class="attractions py-5" id="tourist-attraction">
         <div class="container">
             <h2 class="section-title">Atrakcje</h2>
+            <div class="underline"></div>
             <div class="cards__description">
-                <p class="cards__description-paragraph cards__description-paragraph--large">Zobacz jak miło można
-                    spędzić czas w naszych okolicach
+                <p class="cards__description-paragraph cards__description-paragraph--large" data-aos="fade-up">Zobacz
+                    jak miło można
+                    spędzić czas w naszych okolicach!
                 </p>
             </div>
             <div class="cards__offer">
-                <div class="cards__item">
+                <div class="cards__item" data-aos="fade-right">
                     <div class="cards__image">
                         <div class="cards__image__img">
                             <img src="./dist/img/babia-gora.jpeg" alt="Babia Góra">
@@ -166,10 +172,10 @@
                         </a>
                     </div>
                     <div class="cards__description">
-                        <p><strong>Babia Góra</strong></p>
+                        <p>Babia Góra</p>
                     </div>
                 </div>
-                <div class="cards__item">
+                <div class="cards__item" data-aos="fade-up">
                     <div class="cards__image">
                         <div class="cards__image__img">
                             <img src="./dist/img/jezioro-mucharskie.jpg" alt="Jezioro Mucharskie">
@@ -179,10 +185,10 @@
                         </a>
                     </div>
                     <div class="cards__description">
-                        <p><strong>Jezioro Mucharskie</strong></p>
+                        <p>Jezioro Mucharskie</p>
                     </div>
                 </div>
-                <div class="cards__item">
+                <div class="cards__item" data-aos="fade-left">
                     <div class="cards__image">
                         <div class="cards__image__img">
                             <img src="./dist/img/polskie-gory.jpg" alt="Polskie góry">
@@ -192,7 +198,7 @@
                         </a>
                     </div>
                     <div class="cards__description">
-                        <p><strong>Szczyt Jałowiec</strong></p>
+                        <p>Szczyt Jałowiec</p>
                     </div>
                 </div>
             </div>

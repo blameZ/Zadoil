@@ -1,5 +1,6 @@
 @use './colors' as colors;
 @use './variables' as variables;
+@import './animations';
 
 .motel-hero {
 	position: relative;
@@ -57,7 +58,6 @@
 }
 
 .amenities {
-	background-color: colors.$bg-color-secondary;
 	padding: 2rem;
 
 	.amenities-grid {
@@ -74,14 +74,14 @@
 		list-style: none;
 		margin: 0;
 		padding: 0;
-		border-left: 1px solid #d8cfc8;
+		border-left: 1px solid colors.$bg-color-secondary;
 
 		.amenity-item {
 			display: flex;
 			align-items: center;
 			font-size: 1.125rem;
 			padding: 1rem 0 1rem 1.5rem;
-			border-bottom: 1px solid #e4dbd3;
+			border-bottom: 1px solid colors.$bg-color-secondary;
 
 			&:last-child {
 				border-bottom: none;
@@ -116,6 +116,10 @@
 		font-size: 1.125rem;
 		padding: 1rem 0 1rem 1.5rem;
 		border-bottom: 1px solid #e4dbd3;
+
+		&:last-child {
+			border-bottom: none;
+		}
 
 		i {
 			margin-right: 1rem;
