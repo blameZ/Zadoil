@@ -1,0 +1,266 @@
+@keyframes bounce {
+  0%, 100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  50% {
+    transform: translateX(-50%) translateY(-10px);
+  }
+}
+.petrol-stations {
+  background: linear-gradient(120deg, #f0f0f0, white);
+}
+.petrol-stations h3 {
+  margin-right: auto;
+  text-transform: capitalize;
+  font-size: 1.7rem;
+  transition: color 0.3s;
+  cursor: default;
+}
+.petrol-stations h3:hover {
+  color: #1182a4;
+}
+.petrol-stations__box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+}
+.petrol-stations__box-img {
+  overflow: hidden;
+}
+.petrol-stations__box-text {
+  width: 100%;
+}
+.petrol-stations__img {
+  width: 100%;
+  height: 100%;
+}
+.petrol-stations__title {
+  padding-bottom: 0.7em;
+  font-size: 1.8rem;
+}
+.petrol-stations__details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.petrol-stations__details .station-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  text-align: left;
+}
+.petrol-stations__details .station-amenities {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+}
+.petrol-stations iframe {
+  width: 100%;
+  height: 250px;
+  border: none;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+.petrol-stations p {
+  padding: 0.2em;
+}
+
+.fuel-distribution {
+  position: relative;
+  background-image: url("../../dist/img/fuel-distribution_backing_small.jpg");
+  background-size: cover;
+  background-position: center center;
+  z-index: 0;
+}
+.fuel-distribution h2 {
+  color: white;
+}
+.fuel-distribution__img {
+  width: 100%;
+}
+.fuel-distribution__box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2em;
+  gap: 2rem;
+}
+.fuel-distribution__box-img {
+  width: 80vw;
+}
+.fuel-distribution__box-text {
+  color: white;
+}
+.fuel-distribution__title {
+  color: #f0f0f0;
+  font-weight: 500;
+  font-size: 2.4em;
+}
+.fuel-distribution__text {
+  font-size: 1.3rem;
+  line-height: 1.8em;
+  text-justify: auto;
+}
+.fuel-distribution-shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: -5;
+}
+
+.construction {
+  background: linear-gradient(120deg, #f0f0f0, white);
+}
+.construction__box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.construction__text {
+  font-size: 1.2rem;
+  line-height: 1.8em;
+  color: rgba(0, 0, 0, 0.8);
+  text-align: center;
+  padding: 1rem 2rem;
+  order: 1;
+}
+.construction__img {
+  height: 100%;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.machinery-sales__link {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 800px;
+}
+.machinery-sales__link img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: transform 0.3s;
+}
+.machinery-sales__link img:hover {
+  transform: scale(1.05);
+}
+
+@media (min-width: 576px) {
+  .petrol-stations {
+    background: linear-gradient(120deg, white, #f0f0f0);
+  }
+  .petrol-stations__details {
+    flex-direction: row;
+  }
+  .fuel-distribution__text {
+    line-height: 2.2em;
+  }
+  .construction__text {
+    line-height: 2.2em;
+  }
+}
+@media (min-width: 768px) {
+  .petrol-stations h3 {
+    font-size: 2.5em;
+  }
+  .petrol-stations__box-text {
+    font-size: 1.1em;
+  }
+  .petrol-stations iframe {
+    height: 200%;
+  }
+  .fuel-distribution {
+    background-image: url("../../dist/img/fuel-distribution_backing_big.jpg");
+  }
+  .fuel-distribution__box-text {
+    font-size: 1.5rem;
+  }
+  .construction__box {
+    flex-direction: row;
+    gap: 2rem;
+  }
+  .construction__box-img {
+    width: 50%;
+  }
+  .construction__text {
+    font-size: 1.5rem;
+    width: 50%;
+    text-align: left;
+  }
+}
+@media (min-width: 992px) {
+  html {
+    scroll-padding-top: 72px;
+  }
+  .petrol-stations__box {
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 5em 0;
+  }
+  .petrol-stations__box-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 50%;
+    text-align: right;
+  }
+  .petrol-stations__box-img--right {
+    order: 1;
+  }
+  .petrol-stations__title {
+    font-size: 3.6rem;
+    margin-bottom: 1rem;
+  }
+  .petrol-stations__text {
+    font-size: 2.2rem;
+  }
+  .petrol-stations__img {
+    margin-bottom: 0;
+    max-height: 500px;
+  }
+  .petrol-stations iframe {
+    height: 200px;
+  }
+  .fuel-distribution__box {
+    flex-direction: row;
+  }
+  .fuel-distribution__box-img {
+    width: 50vw;
+  }
+  .fuel-distribution__box-text {
+    width: 50vw;
+    font-size: 1.4em;
+  }
+  .construction__box {
+    flex-direction: row;
+    padding: 4rem;
+    gap: 3rem;
+  }
+  .construction__box-img {
+    width: 40vw;
+  }
+  .construction__box__text {
+    font-size: 1.4rem;
+    line-height: 2rem;
+  }
+  .construction__text {
+    width: 40vw;
+    font-size: 1.4em;
+    order: 0;
+  }
+}/*# sourceMappingURL=petrol-station.css.map */

@@ -1,0 +1,124 @@
+@use './colors' as colors;
+@use './variables' as variables;
+
+.motel-hero {
+	position: relative;
+	height: 100vh;
+	background-image: url('../../dist/img/motel-hero.jpg');
+	background-size: cover;
+	background-position: center center;
+	background-attachment: fixed;
+	color: colors.$white;
+	z-index: 0;
+
+	&__shadow {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		background-color: rgb(0, 0, 0, 0.3);
+		z-index: -5;
+	}
+
+	&__text {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100%;
+
+		h1 {
+			font-size: 4rem;
+		}
+
+		&__logo {
+			padding-top: 1rem;
+			transform: scale(2);
+		}
+	}
+
+	.fa-chevron-down {
+		display: block;
+		position: absolute;
+		bottom: 20px;
+		left: 50%;
+		padding: 40px;
+		transform: translateX(-50%);
+		font-size: 20px;
+		color: colors.$white;
+		animation: bounce 1s infinite;
+		transition: transform 0.3s ease-in-out;
+	}
+
+	img {
+		padding-right: 0.5rem;
+		width: 3rem;
+	}
+}
+
+.amenities {
+	background-color: colors.$bg-color-secondary;
+	padding: 2rem;
+
+	.amenities-grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 4rem;
+
+		@media (max-width: 768px) {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	.amenities-column {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		border-left: 1px solid #d8cfc8;
+
+		.amenity-item {
+			display: flex;
+			align-items: center;
+			font-size: 1.125rem;
+			padding: 1rem 0 1rem 1.5rem;
+			border-bottom: 1px solid #e4dbd3;
+
+			&:last-child {
+				border-bottom: none;
+			}
+
+			i {
+				width: 28px;
+				height: 28px;
+				margin-right: 1rem;
+				background-size: contain;
+				background-repeat: no-repeat;
+				filter: sepia(0.5) brightness(0.6);
+				flex-shrink: 0;
+			}
+		}
+	}
+}
+
+.additional-info {
+	padding: 2rem;
+
+	&__list {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	&__item {
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		font-size: 1.125rem;
+		padding: 1rem 0 1rem 1.5rem;
+		border-bottom: 1px solid #e4dbd3;
+
+		i {
+			margin-right: 1rem;
+		}
+	}
+}

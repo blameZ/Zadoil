@@ -1,0 +1,181 @@
+.hero-restaurant {
+  position: relative;
+  height: 30vh;
+  background-image: url("../../dist/img/hero-restaurant.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  color: white;
+  z-index: 0;
+}
+.hero-restaurant__shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: -5;
+}
+.hero-restaurant__text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.hero-restaurant__text h1 {
+  font-size: 4rem;
+}
+.hero-restaurant__text__logo {
+  transform: scale(0.1);
+}
+
+.restaurant-info {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 60px 20px;
+  overflow: hidden;
+}
+.restaurant-info__description p {
+  text-align: center;
+  line-height: 2rem;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.menu-filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6rem;
+}
+.menu-filters__button {
+  flex: 1 1 150px;
+  min-width: 150px;
+  padding: 0.5rem 1.2rem;
+  background: none;
+  border: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  text-align: center;
+  transition: scale 0.3s ease;
+}
+.menu-filters__button:active {
+  transform: scale(0.95);
+}
+.menu-filters__button--active {
+  font-weight: bold;
+}
+
+.restaurant-menu {
+  padding: 2rem;
+  background-color: #f6eee8;
+}
+.restaurant-menu__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  list-style: none;
+}
+.restaurant-menu__item {
+  padding-top: 1.5rem;
+  color: rgba(0, 0, 0, 0.7);
+  font-weight: 300;
+}
+.restaurant-menu__item__title {
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.restaurant-menu__item__title--large {
+  text-transform: uppercase;
+  font-size: 1.7rem;
+}
+.restaurant-menu__item p {
+  line-height: 2rem;
+}
+.restaurant-menu__allergens {
+  font-style: italic;
+}
+
+.occasional-parties {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.occasional-parties--wedding {
+  background-color: #f6eee8;
+}
+.occasional-parties__text {
+  text-align: center;
+  line-height: 2rem;
+  color: rgba(0, 0, 0, 0.7);
+}
+.occasional-parties__image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1rem;
+  padding-bottom: 3rem;
+}
+.occasional-parties__image img {
+  height: 250px;
+  border-top-left-radius: 500px;
+  border-top-right-radius: 500px;
+}
+
+.price-offer {
+  padding: 2rem;
+}
+.price-offer--wedding {
+  background-color: #f6eee8;
+}
+.price-offer--wedding__items-wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 2rem;
+}
+.price-offer--wedding__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 230px;
+  height: 280px;
+  background-color: #1182a4;
+  border-top-left-radius: 500px;
+  border-top-right-radius: 500px;
+}
+.price-offer--wedding__item p {
+  font-size: 2rem;
+  font-weight: 300;
+  color: #f0f0f0;
+}
+.price-offer__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  text-align: center;
+  list-style: none;
+}
+.price-offer__item {
+  padding-top: 1.5rem;
+  color: rgba(0, 0, 0, 0.7);
+  font-weight: 300;
+}
+.price-offer__item__title {
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.price-offer__item__title--big {
+  font-size: 1.4rem;
+  font-weight: 300;
+}/*# sourceMappingURL=restaurant.css.map */
