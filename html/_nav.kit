@@ -9,11 +9,39 @@
         </div>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <a class="nav-link" id="motel" aria-current="page" href="./motel.html">Motel</a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link" id="main-page" aria-current="page" href="./index.html">Strona główna</a>
+
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="./index.html#aboutus">O nas</a></li>
+                        <li><a class="dropdown-item" href="./index.html#petrol-stations">Stacje paliw</a></li>
+                        <li><a class="dropdown-item" href="./index.html#fuel-distribution">Dystrybucja paliw</a></li>
+                        <li><a class="dropdown-item" href="./index.html#construction">Budownictwo</a></li>
+                        <li><a class="dropdown-item" href="./index.html#partner-section">Systemy smarowania</a></li>
+                    </ul>
                 </li>
-                <li class="nav-item">
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link" id="motel" aria-current="page" href="./motel.html">Motel</a>
+
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="./motel.html#about-us">Nasz motel</a></li>
+                        <li><a class="dropdown-item" href="./motel.html#rooms">Pokoje</a></li>
+                        <li><a class="dropdown-item" href="./motel.html#amenities">Udogodnienia</a></li>
+                        <li><a class="dropdown-item" href="./motel.html#additional-info">Informacje dodatkowe</a></li>
+                        <li><a class="dropdown-item" href="./motel.html#tourist-attraction">Atrakcje</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
                     <a class="nav-link" id="restaurant" aria-current="page" href="./restaurant.html">Restauracja</a>
+
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="./restaurant.html#restaurant-info">O restauracji</a></li>
+                        <li><a class="dropdown-item" href="./restaurant.html#menu">Menu</a></li>
+                        <li><a class="dropdown-item" href="./restaurant.html#occasional-parties">Przyjęcia
+                                okolicznościowe</a></li>
+                        <li><a class="dropdown-item" href="./restaurant.html#wedding-parties">Przyjęcia weselne</a></li>
+                    </ul>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" id="nav-rental" aria-current="page" href="./rental.html">Wynajem</a>
@@ -22,18 +50,11 @@
                     <a class="nav-link" id="nav-rental" aria-current="page" href="./sales.html">Sprzedaż</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="./index.html#petrol-stations">Stacje paliw</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="./index.html#fuel-distribution">Dystrybucja paliw</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="./index.html#construction">Budownictwo</a>
-                </li>
-                <li class="nav-item">
                     <a class="nav-link" aria-current="page" href="./index.html#contact">Kontakt</a>
                 </li>
             </ul>
         </div>
     </div>
 </nav>
+
+<script src="./dist/js/nav.min.js"></script>

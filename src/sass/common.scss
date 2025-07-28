@@ -165,6 +165,38 @@ nav {
 		}
 	}
 
+	.nav-item.dropdown {
+		position: relative;
+
+		.dropdown-menu {
+			position: absolute;
+			top: 100%;
+			left: 0;
+			display: none;
+			background-color: colors.$bg-color-dark;
+			list-style: none;
+			padding: 0.5rem 0;
+			min-width: 200px;
+			z-index: 1000;
+
+			.dropdown-item {
+				padding: 0.5rem 1rem;
+				color: colors.$white;
+				text-decoration: none;
+				display: block;
+
+				&:hover {
+					background-color: colors.$main-color;
+					color: colors.$white;
+				}
+			}
+
+			&.show {
+				display: block;
+			}
+		}
+	}
+
 	.navbar-toggler {
 		padding: 15px;
 		width: 0;
