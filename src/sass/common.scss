@@ -694,12 +694,16 @@ header.hero-img {
 .offers {
 	padding: 10rem 0;
 	background: linear-gradient(120deg, colors.$white, colors.$light-gray);
+	font-family: 'League Spartan', sans-serif;
+	color: rgba(0, 0, 0, 0.85);
 
 	&__grid {
 		display: flex;
 		flex-wrap: wrap;
-		gap: 1.5rem;
+		gap: 2rem;
 		justify-content: center;
+		max-width: 1200px;
+		margin: 0 auto;
 	}
 
 	.offer {
@@ -709,35 +713,55 @@ header.hero-img {
 		flex: 1 1 100%;
 		max-width: 100%;
 		background-color: colors.$white;
+		border-radius: 12px;
 		border: 1px solid rgba(0, 0, 0, 0.1);
 		overflow: hidden;
-		box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+		box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+		transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.35s ease;
+		cursor: pointer;
+
+		&:hover {
+			transform: translateY(-10px);
+			box-shadow: 0 16px 40px rgba(0, 0, 0, 0.2);
+		}
 
 		&__video-link {
-			margin: 0.8rem auto;
+			margin: 1rem auto 0;
 			text-align: center;
 
 			a {
 				color: colors.$main-color;
 				text-decoration: none;
+				font-weight: 700;
+				font-size: 1.1rem;
+				padding: 0.25rem 0.5rem;
+				border-bottom: 2px solid transparent;
+				transition: border-color 0.3s ease;
+
+				&:hover,
+				&:focus {
+					border-color: colors.$main-color-dark;
+					outline: none;
+				}
 			}
 		}
 
 		&__img {
 			width: 100%;
-			min-height: 230px;
-			height: 230px;
+			min-height: 250px;
+			height: 250px;
 			overflow: hidden;
+			border-bottom: 2px solid colors.$main-color;
 
 			.offer__image {
 				width: 100%;
 				height: 100%;
 				object-fit: cover;
-				transition: transform 0.3s ease-in-out;
+				transition: transform 0.5s ease, filter 0.5s ease;
 
 				&:hover {
-					transform: scale(1.05);
-					filter: brightness(1.05);
+					transform: scale(1.1) rotate(1.5deg);
+					filter: brightness(1.1) saturate(1.1);
 				}
 			}
 		}
@@ -745,16 +769,29 @@ header.hero-img {
 		&__price-row {
 			display: flex;
 			align-items: center;
-			margin: 0 1.1rem;
-			padding: 0;
+			margin: 0 1.5rem;
+			padding: 0.75rem 0;
+			border-top: 1px solid rgba(0, 0, 0, 0.05);
 
 			.offer__toggle {
-				margin-left: auto;
+				margin: 0.5rem;
 				background-color: colors.$white;
-				border: none;
-				padding: 0.4rem 0.8rem;
+				border: 2px solid colors.$main-color;
+				border-radius: 6px;
+				padding: 0.5rem 1rem;
 				cursor: pointer;
-				font-size: 1.2rem;
+				font-size: 1.25rem;
+				font-weight: 600;
+				color: colors.$main-color;
+				transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+
+				&:hover,
+				&:focus {
+					background-color: colors.$main-color;
+					color: colors.$white;
+					box-shadow: 0 0 8px colors.$main-color;
+					outline: none;
+				}
 			}
 		}
 
@@ -763,8 +800,8 @@ header.hero-img {
 			width: 100%;
 			text-align: left;
 			color: colors.$main-color-dark;
-			font-size: 1.3rem;
-			font-weight: 500;
+			font-size: 1.4rem;
+			font-weight: 600;
 
 			strong {
 				color: colors.$black;
@@ -776,55 +813,62 @@ header.hero-img {
 			justify-content: center;
 			align-items: center;
 			margin-top: auto;
-			height: 30px;
-			text-align: center;
+			height: 40px;
 			width: 100%;
 			background-color: colors.$bg-color;
+			font-size: 1rem;
+			font-weight: 500;
 
 			p {
-				margin-bottom: 0;
+				margin: 0;
 			}
 
 			a {
 				text-decoration: none;
 				color: colors.$main-color;
-				transition: color 0.3s;
+				padding-left: 0.5rem;
+				transition: color 0.3s ease;
 
-				&:hover {
+				&:hover,
+				&:focus {
 					color: colors.$bg-color-dark;
+					outline: none;
 				}
 			}
 		}
 
 		&__title {
-			padding: 1rem 0 0 1rem;
+			padding: 1rem 1.5rem 0.5rem 1.5rem;
 			width: 100%;
 			text-align: left;
-			font-size: 1.5rem;
-			font-weight: 400;
+			font-size: 1.8rem;
+			font-weight: 700;
 			color: colors.$main-color;
 			text-transform: uppercase;
+			letter-spacing: 2px;
+			user-select: none;
 		}
 
 		&__description {
-			strong {
-				margin: 1rem 1.5rem;
-			}
-
 			font-size: 1rem;
-			margin: 0 1.5rem;
-			padding: 1rem 1rem 0 0;
-			color: rgba(0, 0, 0, 0.7);
+			margin: 0 1.5rem 1rem 1.5rem;
+			color: rgba(0, 0, 0, 0.75);
 			line-height: 1.8;
 			text-align: left;
+
+			strong {
+				display: block;
+				margin: 1rem 0;
+				color: colors.$main-color-dark;
+			}
 		}
 
 		&__details {
-			margin: 0 1.5rem 1rem;
+			margin: 0 1.5rem 1.5rem 1.5rem;
 			padding: 0 1rem 1rem 0;
 			max-height: 0;
 			overflow: hidden;
-			transition: max-height 0.3s ease-in-out;
+			transition: max-height 0.5s ease, opacity 0.5s ease;
 			opacity: 0;
 			visibility: hidden;
 
@@ -836,9 +880,26 @@ header.hero-img {
 		}
 
 		&__toggle {
-			&:hover {
+			font-weight: 600;
+			cursor: pointer;
+			user-select: none;
+			padding: 0.2rem 0.5rem;
+			border-radius: 4px;
+			color: colors.$main-color;
+			transition: color 0.3s ease;
+
+			&:hover,
+			&:focus {
 				color: colors.$bg-color-dark;
+				outline: none;
 			}
+		}
+	}
+
+	@media (min-width: 576px) {
+		.offer {
+			flex: 1 1 calc(100% - 2rem);
+			max-width: calc(100% - 2rem);
 		}
 	}
 
@@ -861,6 +922,12 @@ header.hero-img {
 		.offer {
 			flex: 1 1 calc(33.333% - 2rem);
 			max-width: calc(33.333% - 2rem);
+		}
+	}
+
+	@media (hover: hover) and (pointer: fine) {
+		.offer__image {
+			will-change: transform, filter;
 		}
 	}
 }
