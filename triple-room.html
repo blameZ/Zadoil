@@ -4,7 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Motel Zadoil</title>
+    <title>Zadoil | 3 osobowy pokój</title>
+    <meta name="description"
+        content="Kompleksowa oferta w Białce – sprzedaż i wynajem maszyn, komfortowy motel, dystrybucja paliw i wiele więcej. Sprawdź naszą ofertę już dziś!">
+    <meta name="keywords"
+        content="sprzedaż maszyn budowlanych Białka, wynajem maszyn Białka, motel w Białce, dystrybucja paliw Białka, koparki na wynajem, ładowarki na sprzedaż">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,13 +16,15 @@
     <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/lightbox2@2/dist/css/lightbox.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./dist/css/common.min.css">
     <link rel="stylesheet" href="./dist/css/motel.min.css">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <script src="https://kit.fontawesome.com/7979a03bd9.js" crossorigin="anonymous"></script>
 </head>
 
-<body>
+
+<body data-bs-spy="scroll" data-bs-target="#navId">
 
     <nav id="navId" class="navbar navbar-expand-lg position-fixed top-0 w-100 py-3">
     <div class="container">
@@ -80,79 +86,61 @@
 </nav>
 
 <script src="./dist/js/nav.min.js"></script>
-    <header class="motel-hero" id="home">
-        <div class="motel-hero__text text-center">
-            <div class="animate-text" data-aos="fade-down">
-                <h1>Motel & Restauracja Zadoil</h1>
-                <img class="hero__text__logo" src="./dist/img/zadoil-logo-color-01.png"
-                    alt="Tytuł strony motelu i restauracji Zadoil">
-            </div>
-        </div>
-        <div class="motel-hero__shadow"></div>
-        <a href="#rooms"><i class="fa-solid fa-chevron-down"></i></a>
-    </header>
+    <main class="room-page">
 
-    <section class="cards" id="about-us">
-        <div class="decor-left"></div>
-        <div class="decor-right"></div>
-        <div class="container">
-            <h2 class="section-title">O nas</h2>
-            <div class="underline"></div>
-            <div class="cards__description" data-aos="fade-up">
-                <p>Witamy w naszym motelu położonym w malowniczej miejscowości
-                    <span class="blue-text">Białka</span>, tuż obok Makowa
-                    Podhalańskiego. <br />
-                    Nasz obiekt oferuje komfortowe w bliskiej odległości od urokliwej
-                    Zawoi. <br /> <br /> Zapewniamy 13 przytulnych pokoi, nasza oferta obejmuje pokoje <span
-                        class="blue-text">2 oraz 3
-                        osobowe. </span><br /> <br />
-                    Nie ważne, czy podróżujesz w celach biznesowych, czy też wypoczywasz z rodziną lub przyjaciółmi,
-                    nasz motel zapewni Ci spokojną atmosferę i komfortowy wypoczynek.<br /> <br />
-                    <span class="blue-text">Serdecznie zapraszamy</span> do odwiedzenia naszego motelu w Białce i
-                    cieszenia się wspaniałymi atrakcjami
-                    okolicznych miejscowości, w tym urokliwej Zawoi.
-                </p>
-            </div>
-            <h2 class="section-title pt-5" id="rooms">Pokoje</h2>
-            <div class="underline"></div>
-            <div class="cards__offer">
-                <div class="cards__item" data-aos="fade-right">
-                    <div class="cards__image">
-                        <div class="cards__image__img">
-                            <img src="./dist/img/pokoj-2.jpg" alt="Pokój 2-osobowy">
-                        </div>
-                        <a href="/double-room.html" class="cards__image__link">
-                            <span>Pokaż pokój</span>
-                        </a>
-                    </div>
-                    <div class="cards__description">
-                        <p><strong>Pokój 2-osobowy</strong></p>
-                        <p>Przytulny pokój dla jednej lub dwóch osób. Idealny na krótki wypoczynek lub wyjazd biznesowy.
-                        </p>
-                        <p>
-                            <a class="link link--text-color" href="/double-room.html">Zobacz pokój</a>
-                        </p>
-                    </div>
+        <h2 class="section-title" data-aos="fade-down">Pokój 3-osobowy</h2>
+        <div class="underline" data-aos="fade-down"></div>
+
+        <section class="gallery">
+            <div class="container gallery__grid">
+                <div class="gallery__main">
+                    <a href="/dist/img/pokoj-3.jpg" data-lightbox="room2" data-title="Pokój 3-osobowy - zdjęcie 1">
+                        <img src="/dist/img/pokoj-3.jpg" alt="Zdjęcie pokoju trzyosobowego - 1" class="gallery__thumb">
+                    </a>
                 </div>
-
-                <div class="cards__item" data-aos="fade-left">
-                    <div class="cards__image">
-                        <div class="cards__image__img">
-                            <img src="./dist/img/pokoj-3.jpg" alt="Pokój 3-osobowy">
-                        </div>
-                        <a href="/triple-room.html" class="cards__image__link">
-                            <span>Pokaż pokój</span>
-                        </a>
-                    </div>
-                    <div class="cards__description">
-                        <p><strong>Pokój 3-osobowy</strong></p>
-                        <p>Przestronny pokój dla trzech osób, doskonały dla rodzin lub grupy znajomych.</p>
-                        <p><a class="link link--text-color" href="/triple-room.html">Zobacz pokój</a></p>
-                    </div>
+                <div class="gallery__side">
+                    <a href="/dist/img/pokoj-3-2.jpg" data-lightbox="room2" data-title="Pokój 3-osobowy - zdjęcie 2">
+                        <img src="/dist/img/pokoj-3-2.jpg" alt="Zdjęcie pokoju trzyosobowego - 2"
+                            class="gallery__thumb">
+                    </a>
+                    <a href="/dist/img/lazienka-1.jpg" data-lightbox="room2" data-title="Pokój 3-osobowy - zdjęcie 3">
+                        <img src="/dist/img/lazienka-1.jpg" alt="Zdjęcie pokoju trzyosobowego - 3"
+                            class="gallery__thumb">
+                    </a>
+                    <a href="/dist/img/lazienka-2.jpg" data-lightbox="room2" data-title="Pokój 3-osobowy - zdjęcie 4">
+                        <img src="/dist/img/lazienka-2.jpg" alt="Zdjęcie pokoju trzyosobowego - 4"
+                            class="gallery__thumb">
+                    </a>
+                    <a href="/dist/img/szafka.jpg" data-lightbox="room2" data-title="Pokój 3-osobowy - zdjęcie 5">
+                        <img src="/dist/img/szafka.jpg" alt="Zdjęcie pokoju trzyosobowego - 5" class="gallery__thumb">
+                    </a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+
+
+        <section class="room-card room-card--triple">
+            <div class="container">
+                <div class="room-card__pricing">
+                    <p class="room-card__category">Nocleg bez śniadania:</p>
+                    <ul class="room-card__features" data-aos="fade-right">
+                        <li class="room-card__feature">3 osoby – 315 PLN</li>
+                    </ul>
+
+                    <p class="room-card__category">Nocleg ze śniadaniem:</p>
+                    <ul class="room-card__features" data-aos="fade-right">
+                        <li class="room-card__feature">3 osoby – 355 PLN</li>
+                    </ul>
+
+                    <p class="room-card__category">Pakiet hotelowy (śniadanie + kolacja):</p>
+                    <ul class="room-card__features" data-aos="fade-right">
+                        <li class="room-card__feature">3 osoby – 455 PLN</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <section class="amenities" id="amenities" data-aos="fade-right">
     <div class="container">
@@ -202,84 +190,6 @@
         </div>
     </div>
 </section>
-    <section class="additional-info bg-light" id="additional-info" data-aos="fade-down">
-        <div class="container">
-            <h2 class="section-title">Informacje dodatkowe</h2>
-            <div class="underline"></div>
-            <ul class="additional-info__list">
-                <li class="additional-info__item">
-                    <i class="fa-solid fa-building-circle-check"></i>Zameldowanie w Motelu - 14:00. Wymeldowanie -
-                    12:00.
-                </li>
-                <li class="additional-info__item">
-                    <i class="fa-solid fa-mug-saucer"></i> Śniadania w godzinach 6:00 - 12:00.
-                </li>
-                <li class="additional-info__item">
-                    <i class="fa-solid fa-utensils"></i> Restauracja czynna w godzinach 6:00 - 22:00.
-                </li>
-                <li class="additional-info__item">
-                    <i class="fa-solid fa-square-parking"></i> Bezpłatny parking prywatny jest dostępny na miejscu.
-                    (nie jest konieczna rezerwacja)
-                </li>
-
-            </ul>
-        </div>
-    </section>
-
-    <section class="attractions py-5" id="tourist-attraction">
-        <div class="container">
-            <h2 class="section-title">Atrakcje</h2>
-            <div class="underline"></div>
-            <div class="cards__description">
-                <p class="cards__description-paragraph cards__description-paragraph--large" data-aos="fade-up">Zobacz
-                    jak miło można
-                    spędzić czas w naszych okolicach!
-                </p>
-            </div>
-            <div class="cards__offer">
-                <div class="cards__item" data-aos="fade-right">
-                    <div class="cards__image">
-                        <div class="cards__image__img">
-                            <img src="./dist/img/babia-gora.jpeg" alt="Babia Góra">
-                        </div>
-                        <a href="/pokoj-2-osobowy" class="cards__image__link">
-                            <span>Zobacz więcej</span>
-                        </a>
-                    </div>
-                    <div class="cards__description">
-                        <p>Babia Góra</p>
-                    </div>
-                </div>
-                <div class="cards__item" data-aos="fade-up">
-                    <div class="cards__image">
-                        <div class="cards__image__img">
-                            <img src="./dist/img/jezioro-mucharskie.jpg" alt="Jezioro Mucharskie">
-                        </div>
-                        <a href="/pokoj-2-osobowy" class="cards__image__link">
-                            <span>Dowiedz się więcej</span>
-                        </a>
-                    </div>
-                    <div class="cards__description">
-                        <p>Jezioro Mucharskie</p>
-                    </div>
-                </div>
-                <div class="cards__item" data-aos="fade-left">
-                    <div class="cards__image">
-                        <div class="cards__image__img">
-                            <img src="./dist/img/polskie-gory.jpg" alt="Polskie góry">
-                        </div>
-                        <a href="/pokoj-2-osobowy" class="cards__image__link">
-                            <span>Dowiedz się więcej</span>
-                        </a>
-                    </div>
-                    <div class="cards__description">
-                        <p>Szczyt Jałowiec</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <section id="contact" class="contact py-5 bg-light">
     <h2 class="section-title">kontakt</h2>
     <div class="underline"></div>
@@ -322,11 +232,11 @@
 <footer>
     <p>&copy; <span id="current-year"></span> Zadoil. Wszelkie prawa zastrzeżone. | Powered by BartIt</p>
 </footer>
-    <script src="https://kit.fontawesome.com/7979a03bd9.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lightbox2@2/dist/js/lightbox-plus-jquery.min.js"></script>
     <script src="./dist/js/aos.min.js"></script>
     <script src="./dist/js/slick.min.js"></script>
     <script src="./dist/js/script.min.js"></script>

@@ -1,6 +1,12 @@
 @use './colors' as colors;
 @use './variables' as variables;
 @import './animations';
+$color-primary: #1a1a1a;
+$color-accent: #be8b52;
+$color-muted: #555;
+$color-light: #f8f8f8;
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;
 
 .motel-hero {
 	position: relative;
@@ -59,6 +65,7 @@
 
 .amenities {
 	padding: 2rem;
+	background-color: colors.$bg-color-secondary;
 
 	.amenities-grid {
 		display: grid;
@@ -74,14 +81,14 @@
 		list-style: none;
 		margin: 0;
 		padding: 0;
-		border-left: 1px solid colors.$bg-color-secondary;
+		border-left: 1px solid colors.$bg-color;
 
 		.amenity-item {
 			display: flex;
 			align-items: center;
 			font-size: 1.125rem;
 			padding: 1rem 0 1rem 1.5rem;
-			border-bottom: 1px solid colors.$bg-color-secondary;
+			border-bottom: 1px solid colors.$bg-color;
 
 			&:last-child {
 				border-bottom: none;
@@ -123,6 +130,149 @@
 
 		i {
 			margin-right: 1rem;
+		}
+	}
+}
+
+.room-page {
+	padding-top: 10rem;
+}
+
+.gallery {
+	padding: 2rem 0;
+
+	&__grid {
+		display: grid;
+		grid-template-columns: 2fr 1fr;
+		gap: 1rem;
+
+		@media (max-width: 768px) {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	&__main {
+		a {
+			display: block;
+			height: 100%;
+		}
+
+		img {
+			width: 100%;
+			height: 100%;
+			aspect-ratio: 4 / 3;
+			object-fit: cover;
+			border-radius: 12px;
+			box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+			transition: transform 0.3s ease;
+
+			&:hover {
+				transform: scale(1.02);
+			}
+		}
+	}
+
+	&__side {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-auto-rows: minmax(80px, 1fr);
+		gap: 0.5rem;
+
+		a {
+			display: block;
+		}
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			border-radius: 10px;
+			transition: transform 0.3s ease;
+			aspect-ratio: 1 / 1;
+
+			&:hover {
+				transform: scale(1.03);
+			}
+		}
+	}
+}
+
+.room-card {
+	background-color: colors.$bg-color;
+	margin-top: 3rem;
+	padding: 2.5rem 2rem;
+	border-radius: 16px;
+	box-shadow: 0 16px 36px rgba(0, 0, 0, 0.06);
+	transition: transform 0.3s ease;
+	position: relative;
+
+	@media (min-width: $breakpoint-lg) {
+		padding: 4rem 3rem;
+	}
+
+	&--double::before {
+		content: 'Pokój 2-osobowy';
+		position: absolute;
+		top: -1rem;
+		left: -1rem;
+		background: colors.$main-color;
+		color: colors.$white;
+		padding: 0.5rem 1.25rem;
+		font-weight: 600;
+		font-size: 0.9rem;
+		border-bottom-right-radius: 1rem;
+		box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+	}
+
+	&--triple::before {
+		content: 'Pokój 3-osobowy';
+		position: absolute;
+		top: -1rem;
+		left: -1rem;
+		background: colors.$main-color;
+		color: colors.$white;
+		padding: 0.5rem 1.25rem;
+		font-weight: 600;
+		font-size: 0.9rem;
+		border-bottom-right-radius: 1rem;
+		box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+	}
+
+	&__pricing {
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+	}
+
+	&__category {
+		font-size: 1.25rem;
+		font-weight: 600;
+		color: $color-primary;
+		margin-bottom: 0.5rem;
+		border-left: 4px solid colors.$main-color-dark;
+		padding-left: 0.75rem;
+	}
+
+	&__features {
+		list-style: none;
+		margin: 0;
+		padding-left: 1rem;
+
+		.room-card__feature {
+			font-size: 1.05rem;
+			color: $color-muted;
+			position: relative;
+			padding-left: 1.25rem;
+			margin: 0.4rem 0;
+
+			&::before {
+				content: '–';
+				position: absolute;
+				left: 0;
+				color: colors.$main-color;
+				font-size: 1.25rem;
+				line-height: 1;
+			}
 		}
 	}
 }

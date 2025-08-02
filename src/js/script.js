@@ -12,7 +12,12 @@ document.addEventListener('DOMContentLoaded', function () {
 	function addShadow() {
 		if (window.scrollY >= 300) {
 			nav.classList.add('shadow-bg')
-		} else if (window.location.pathname.includes('rental') || window.location.pathname.includes('sales')) {
+		} else if (
+			window.location.pathname.includes('rental') ||
+			window.location.pathname.includes('sales') ||
+			window.location.pathname.includes('double-room') ||
+			window.location.pathname.includes('triple-room')
+		) {
 			nav.classList.add('shadow-bg')
 		} else {
 			nav.classList.remove('shadow-bg')
