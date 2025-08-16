@@ -167,6 +167,10 @@
 .price-offer {
 	padding: 2rem;
 
+	ul {
+		padding-left: 0;
+	}
+
 	&--wedding {
 		background-color: colors.$bg-color-secondary;
 
@@ -220,6 +224,24 @@
 				font-size: 1.4rem;
 				font-weight: 300;
 			}
+		}
+	}
+
+	&__box {
+		border: 2px solid colors.$main-color;
+		border-radius: 6px;
+		padding: 12px 20px;
+		margin-bottom: 2rem;
+		text-align: center;
+		font-style: italic;
+		font-weight: 600;
+		background: transparent;
+		transition: all 0.3s ease;
+
+		p {
+			padding: 0;
+			margin: 0;
+			color: colors.$main-color-dark;
 		}
 	}
 }
