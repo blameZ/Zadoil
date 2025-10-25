@@ -717,13 +717,7 @@ header.hero-img {
 		border: 1px solid rgba(0, 0, 0, 0.1);
 		overflow: hidden;
 		box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
-		transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.35s ease;
 		cursor: pointer;
-
-		&:hover {
-			transform: translateY(-10px);
-			box-shadow: 0 16px 40px rgba(0, 0, 0, 0.2);
-		}
 
 		&__video-link {
 			margin: 1rem auto 0;
@@ -760,15 +754,16 @@ header.hero-img {
 				transition: transform 0.5s ease, filter 0.5s ease;
 
 				&:hover {
-					transform: scale(1.1) rotate(1.5deg);
-					filter: brightness(1.1) saturate(1.1);
+					transform: scale(1.05) rotate(1deg);
+					filter: brightness(1.05) saturate(1.05);
 				}
 			}
 		}
 
 		&__price-row {
 			display: flex;
-			align-items: center;
+			flex-direction: column;
+			align-items: start;
 			margin: 0 1.5rem;
 			padding: 0.75rem 0;
 			border-top: 1px solid rgba(0, 0, 0, 0.05);

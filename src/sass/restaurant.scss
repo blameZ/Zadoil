@@ -196,6 +196,7 @@
 				font-size: 2rem;
 				font-weight: 300;
 				color: colors.$light-gray;
+				text-decoration: none;
 			}
 		}
 	}
@@ -237,11 +238,16 @@
 		font-weight: 600;
 		background: transparent;
 		transition: all 0.3s ease;
+		text-decoration: none;
 
 		p {
 			padding: 0;
 			margin: 0;
 			color: colors.$main-color-dark;
 		}
+	}
+
+	&__link {
+		text-decoration: none;
 	}
 }
