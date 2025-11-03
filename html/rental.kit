@@ -33,288 +33,559 @@
 
     <!-- @include 'nav.kit' -->
 
-    <section id="rental-offers" class="offers">
+    <section id="rental-offers" class="offers py-5">
         <div class="container">
-            <h2 class="section-title">WYNAJEM </br>MASZYN I SAMOCHODÓW</h2>
+            <h2 class="section-title section-title--padding-top">WYNAJEM <br>MASZYN I SAMOCHODÓW</h2>
             <div class="underline"></div>
 
-            <div class="offers__grid">
+            <div class="row">
 
-                <!-- GLEBOGRYZARKA HUSQVARNA -->
-                <div class="offer" data-aos="fade-up">
-                    <div class="offer__img">
-                        <a href="./dist/img/sales/glebogryzarka.jpg" data-fancybox="gallery0">
-                            <img src="./dist/img/sales/glebogryzarka.jpg" alt="Zdjęcie glebogryzarki husqvarna"
-                                class="offer__image">
-                        </a>
-                    </div>
-                    g
-                    <h3 class="offer__title">Glebogryzarka Husqvarna</h3>
+                <aside class="col-lg-3 rental-sidebar">
 
-                    <div class="offer__price-row">
-                        <p>CENA NETTO ZA DOBĘ: <strong>75 PLN</strong></p>
-                        <p>CENA NETTO DO 5H: <strong>55 PLN</strong></p>
-
+                    <div class="widget widget-search">
+                        <h4 class="widget-title">Wyszukaj</h4>
+                        <form action="#" class="search-form">
+                            <input type="search" class="form-control" placeholder="Szukaj produktów..."
+                                id="search-input">
+                            <button type="submit"><i class="fa fa-search"></i></button>
+                        </form>
                     </div>
 
-                    <div class="offer__description" style="margin-bottom: 1.5rem;">
-                        <strong>Dane techniczne</strong>
-                        <ul>
-                            <li>Model: Husqvarna TF 435P</li>
-                            <li>Typ: Glebogryzarka spalinowa</li>
-                            <li>Silnik: Benzynowy</li>
-                            <li>Szerokość robocza: 85 cm</li>
+                    <div class="widget widget-categories">
+                        <h4 class="widget-title">Kategorie Produktów</h4>
+                        <ul class="category-list" id="category-list">
+                            <li>
+                                <a href="#" data-category="all">
+                                    Wszystkie
+                                    <span id="count-all">(0)</span> </a>
+                            </li>
+                            <li>
+                                <a href="#" data-category="glebogryzarka">
+                                    Glebogryzarki
+                                    <span>(0)</span> </a>
+                            </li>
+                            <li>
+                                <a href="#" data-category="minikoparka">
+                                    Minikoparki
+                                    <span>(0)</span> </a>
+                            </li>
+                            <li>
+                                <a href="#" data-category="ladowarka">
+                                    Ładowarki
+                                    <span>(0)</span> </a>
+                            </li>
+                            <li>
+                                <a href="#" data-category="walec">
+                                    Walce
+                                    <span>(0)</span> </a>
+                            </li>
+                            <li>
+                                <a href="#" data-category="zageszczarka">
+                                    Zagęszczarki
+                                    <span>(0)</span> </a>
+                            </li>
+                            <li>
+                                <a href="#" data-category="przecinarka">
+                                    Przecinarki
+                                    <span>(0)</span> </a>
+                            </li>
+                            <li>
+                                <a href="#" data-category="laweta">
+                                    Lawety
+                                    <span>(0)</span> </a>
+                            </li>
+                            <li>
+                                <a href="#" data-category="samochod">
+                                    Samochody
+                                    <span>(0)</span> </a>
+                            </li>
                         </ul>
-                        <br />
+                    </div>
+
+                </aside>
+                <main class="col-lg-9">
+
+                    <div class="results-info" id="results-counter">
                         <p>
-                            Mocna i niezawodna glebogryzarka spalinowa, idealna do szybkiego i bezwysiłkowego
-                            przygotowywania podłoża pod trawniki, uprawy warzyw i kwiatów. Urządzenie pozwala spulchnić
-                            nawet twardą i zbitą glebę, oferując szerokość roboczą ok. 85 cm.
+                            Wyświetlanie <span id="count-start">1</span>–<span id="count-visible">9</span> z <span
+                                id="count-total">9</span> wyników
                         </p>
                     </div>
 
+                    <div id="no-results-message" class="alert alert-warning" style="display: none;">
+                        Brak produktów pasujących do wybranych kryteriów.
+                    </div>
 
-                    <div class="offer-info">
-                        <p>W celu zakupu prosimy o <a href="sales.html#contact">kontakt</a></p>
-                    </div>
-                </div>
-                <!-- GLEBOGRYZARKA HUSQVARNA -->
+                    <div class="row g-4" id="product-grid">
 
-                <div class="offer" data-aos="fade-up">
-                    <div class="offer__img">
-                        <a href="./dist/img/rental/mini_koparka_1_1.jpg" data-fancybox="gallery1">
-                            <img src="./dist/img/rental/mini_koparka_1_1.jpg" alt="Koparka New Holland e19c"
-                                class="offer__image">
-                        </a>
-                        <a href="./dist/img/rental/mini_koparka_1_2.jpg" data-fancybox="gallery1">
-                        </a>
-                    </div>
-                    <h3 class="offer__title">Koparka gąsienicowa New Holland e19c</h3>
-                    <div class="offer__description">
-                        <p>Minikoparka o masie 2 ton, doskonała do precyzyjnych prac wykopowych w trudno dostępnych
-                            miejscach.</p>
-                    </div>
-                    <div class="offer-info">
-                        <p>W celu wynajmu prosimy o <a href="rental.html#contact">kontakt</a></p>
-                    </div>
-                </div>
+                        <div class="col-xl-4 col-md-6" data-category="glebogryzarka">
+                            <div class="card rental-card h-100">
+                                <a href="./dist/img/sales/glebogryzarka.jpg" data-fancybox="gallery-1"
+                                    class="card-img-wrapper">
+                                    <img src="./dist/img/sales/glebogryzarka.jpg" class="card-img-top"
+                                        alt="Glebogryzarka Husqvarna">
+                                </a>
+                                <div class="card-body">
+                                    <h3 class="card-title">Glebogryzarka Husqvarna</h3>
+                                    <p class="card-model">Model: TF 435P</p>
+                                    <div class="card-price-list">
+                                        <strong>Cennik (netto):</strong>
+                                        <p>Cena / doba: <span>75 PLN</span></p>
+                                        <p>Cena / do 5h: <span>55 PLN</span></p>
+                                    </div>
+                                    <a class="card-toggle" data-fancybox data-src="#details-1">
+                                        Pokaż opis
+                                    </a>
+                                    <div class="card-details" id="details-1">
+                                        <div class="card-description">
+                                            <strong>Opis:</strong>
+                                            <p>Mocna i niezawodna glebogryzarka spalinowa, idealna do szybkiego i
+                                                bezwysiłkowego przygotowywania podłoża pod trawniki, uprawy warzyw i
+                                                [cite_start]kwiatów. [cite: 5] Urządzenie pozwala spulchnić nawet twardą
+                                                i zbitą glebę, oferując szerokość roboczą ok. [cite_start]85 cm. [cite:
+                                                6]</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <a href="rental.html#contact" class="btn btn-primary-outline">Zapytaj o wynajem</a>
+                                </div>
+                            </div>
+                        </div>
 
-                <div class="offer" data-aos="fade-up">
-                    <div class="offer__img">
-                        <a href="./dist/img/rental/mini-koparka.jpg" data-fancybox="gallery2">
-                            <img src="./dist/img/rental/mini-koparka.jpg" alt="Koparka New Holland e37c"
-                                class="offer__image">
-                        </a>
-                    </div>
-                    <h3 class="offer__title">Koparka gąsienicowa New Holland e37c</h3>
-                    <div class="offer__description">
-                        <p>Minikoparka o masie 3,8 tony, która zapewnia większą moc i stabilność.</p>
-                    </div>
-                    <div class="offer-info">
-                        <p>W celu wynajmu prosimy o <a href="rental.html#contact">kontakt</a></p>
-                    </div>
-                </div>
+                        <div class="col-xl-4 col-md-6" data-category="minikoparka">
+                            <div class="card rental-card h-100">
+                                <a href="./dist/img/rental/mini_koparka_1_1.jpg" data-fancybox="gallery-2"
+                                    class="card-img-wrapper">
+                                    <img src="./dist/img/rental/mini_koparka_1_1.jpg" class="card-img-top"
+                                        alt="Koparka New Holland e19c">
+                                </a>
+                                <div class="card-body">
+                                    <h3 class="card-title">Koparka gąsienicowa</h3>
+                                    <p class="card-model">New Holland e19c</p>
+                                    <div class="card-price-list">
+                                        <strong>Cennik (netto):</strong>
+                                        <p>Cena / doba: <span>325 PLN</span></p>
+                                    </div>
+                                    <a class="card-toggle" data-fancybox data-src="#details-2">
+                                        Pokaż opis
+                                    </a>
+                                    <div class="card-details" id="details-2">
+                                        <div class="card-description">
+                                            <strong>Opis:</strong>
+                                            <p>Minikoparka jest idealna do pracy w ciasnych i trudno dostępnych
+                                                miejscach dzięki
+                                                kompaktowym wymiarom i zerowemu zachodzeniu tylnej części nadwozia (Zero
+                                                Tail
+                                                [cite_start]Swing). [cite: 14] Jest niezastąpiona przy wykopach pod
+                                                instalacje, drenażach i kształtowaniu
+                                                [cite_start]terenu. [cite: 15]</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <a href="rental.html#contact" class="btn btn-primary-outline">Zapytaj o wynajem</a>
+                                </div>
+                            </div>
+                        </div>
 
-                <div class="offer" data-aos="fade-up">
-                    <div class="offer__img">
-                        <a href="./dist/img/rental/koparko-ladowarka.jpg" data-fancybox="gallery3">
-                            <img src="./dist/img/rental/koparko-ladowarka.jpg" alt="Koparko ładowarka New Holland b115"
-                                class="offer__image">
-                        </a>
-                    </div>
-                    <h3 class="offer__title">Koparko-ładowarka New Holland b115</h3>
-                    <div class="offer__description">
-                        <p>Wszechstronna maszyna łącząca funkcje koparki i ładowarki, idealna do różnorodnych prac
-                            budowlanych.</p>
-                    </div>
-                    <div class="offer-info">
-                        <p>W celu wynajmu prosimy o <a href="rental.html#contact">kontakt</a></p>
-                    </div>
-                </div>
+                        <div class="col-xl-4 col-md-6" data-category="minikoparka">
+                            <div class="card rental-card h-100">
+                                <a href="./dist/img/rental/mini-koparka.jpg" data-fancybox="gallery-3"
+                                    class="card-img-wrapper">
+                                    <img src="./dist/img/rental/mini-koparka.jpg" class="card-img-top"
+                                        alt="Koparka New Holland e37c">
+                                </a>
+                                <div class="card-body">
+                                    <h3 class="card-title">Koparka gąsienicowa</h3>
+                                    <p class="card-model">New Holland e37c</p>
+                                    <div class="card-price-list">
+                                        <strong>Cennik (netto):</strong>
+                                        <p>Cena / doba: <span>450 PLN</span></p>
+                                    </div>
+                                    <a class="card-toggle" data-fancybox data-src="#details-3">
+                                        Pokaż opis
+                                    </a>
+                                    <div class="card-details" id="details-3">
+                                        <div class="card-description">
+                                            <strong>Opis:</strong>
+                                            <p>Maszyna charakteryzuje się zwiększoną mocą (24,4 KM) i dużą głębokością
+                                                kopania
+                                                (3135 mm)[cite_start], co czyni ją idealną do zaawansowanych prac
+                                                ziemnych i niwelacji terenu. [cite: 25] [cite_start]Waży 3765 kg. [cite:
+                                                26]</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <a href="rental.html#contact" class="btn btn-primary-outline">Zapytaj o wynajem</a>
+                                </div>
+                            </div>
+                        </div>
 
-                <div class="offer" data-aos="fade-up">
-                    <div class="offer__img">
-                        <a href="./dist/img/rental/walec_3.jpg" data-fancybox="gallery4">
-                            <img src="./dist/img/rental/walec_3.jpg" alt="Walec" class="offer__image">
-                        </a>
-                    </div>
-                    <h3 class="offer__title">Walec AMMANN</h3>
-                    <div class="offer__description">
-                        <p>Walec o masie 2,6 tony z gładkim bębnem, idealny do zagęszczania nawierzchni asfaltowych i
-                            gruntowych.</p>
-                    </div>
-                    <div class="offer-info">
-                        <p>W celu wynajmu prosimy o <a href="rental.html#contact">kontakt</a></p>
-                    </div>
-                </div>
+                        <div class="col-xl-4 col-md-6" data-category="ladowarka">
+                            <div class="card rental-card h-100">
+                                <a href="./dist/img/rental/koparko-ladowarka.jpg" data-fancybox="gallery-4"
+                                    class="card-img-wrapper">
+                                    <img src="./dist/img/rental/koparko-ladowarka.jpg" class="card-img-top"
+                                        alt="Koparko ładowarka New Holland b115">
+                                </a>
+                                <div class="card-body">
+                                    <h3 class="card-title">Koparko-ładowarka</h3>
+                                    <p class="card-model">New Holland b115</p>
+                                    <div class="card-price-list">
+                                        <strong>Cennik (netto):</strong>
+                                        <p>Cena / doba: <span>... PLN</span></p>
+                                    </div>
+                                    <a class="card-toggle" data-fancybox data-src="#details-4">
+                                        Pokaż opis
+                                    </a>
+                                    <div class="card-details" id="details-4">
+                                        <div class="card-description">
+                                            <strong>Opis:</strong>
+                                            <p>Wszechstronna maszyna łącząca funkcje koparki i ładowarki, idealna do
+                                                różnorodnych prac budowlanych.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <a href="rental.html#contact" class="btn btn-primary-outline">Zapytaj o wynajem</a>
+                                </div>
+                            </div>
+                        </div>
 
-                <div class="offer" data-aos="fade-up">
-                    <div class="offer__img">
-                        <a href="./dist/img/rental/walec_1.jpg" data-fancybox="gallery5">
-                            <img src="./dist/img/rental/walec_1.jpg" alt="Walec okołkowany Demag" class="offer__image">
-                        </a>
-                        <a href="./dist/img/rental/walec_1_2.jpg" data-fancybox="gallery5">
-                        </a>
-                    </div>
-                    <h3 class="offer__title">Walec okołkowany Demag</h3>
-                    <div class="offer__description">
-                        <p>Walec kółkowy o masie 1,5 tony, doskonały do prac związanych z zagęszczaniem gruntu.</p>
-                    </div>
-                    <div class="offer-info">
-                        <p>W celu wynajmu prosimy o <a href="rental.html#contact">kontakt</a></p>
-                    </div>
-                </div>
+                        <div class="col-xl-4 col-md-6" data-category="walec">
+                            <div class="card rental-card h-100">
+                                <a href="./dist/img/rental/walec_3.jpg" data-fancybox="gallery-5"
+                                    class="card-img-wrapper">
+                                    <img src="./dist/img/rental/walec_3.jpg" class="card-img-top" alt="Walec AMMANN">
+                                </a>
+                                <div class="card-body">
+                                    <h3 class="card-title">Walec Dwubębnowy</h3>
+                                    <p class="card-model">Ammann 2.6T</p>
+                                    <div class="card-price-list">
+                                        <strong>Cennik (netto):</strong>
+                                        <p>Cena / doba: <span>400 PLN</span></p>
+                                    </div>
+                                    <a class="card-toggle" data-fancybox data-src="#details-5">
+                                        Pokaż opis
+                                    </a>
+                                    <div class="card-details" id="details-5">
+                                        <div class="card-description">
+                                            <strong>Opis:</strong>
+                                            <p>Profesjonalna maszyna do zagęszczania asfaltu i materiałów nienasyconych,
+                                                [cite_start]zapewniająca szybkie i jednolite zagęszczenie na szerokiej
+                                                powierzchni. [cite: 59] Walec jest
+                                                [cite_start]wyposażony w zbiornik na wodę do zraszania bębnów. [cite:
+                                                60]</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <a href="rental.html#contact" class="btn btn-primary-outline">Zapytaj o wynajem</a>
+                                </div>
+                            </div>
+                        </div>
 
-                <div class="offer" data-aos="fade-up">
-                    <div class="offer__img">
-                        <a href="./dist/img/rental/walec_2.jpg" data-fancybox="gallery6">
-                            <img src="./dist/img/rental/walec_2.jpg" alt="Walec bębnowy gładki bomag"
-                                class="offer__image">
-                        </a>
-                    </div>
-                    <h3 class="offer__title">Walec bębnowy</h3>
-                    <div class="offer__description">
-                        <p>Solidny walec bębnowy przeznaczony do ciężkich prac budowlanych na dużych powierzchniach.</p>
-                    </div>
-                    <div class="offer-info">
-                        <p>W celu wynajmu prosimy o <a href="rental.html#contact">kontakt</a></p>
-                    </div>
-                </div>
+                        <div class="col-xl-4 col-md-6" data-category="walec">
+                            <div class="card rental-card h-100">
+                                <a href="./dist/img/rental/walec_1.jpg" data-fancybox="gallery-6"
+                                    class="card-img-wrapper">
+                                    <img src="./dist/img/rental/walec_1.jpg" class="card-img-top"
+                                        alt="Walec okołkowany Demag">
+                                </a>
+                                <div class="card-body">
+                                    <h3 class="card-title">Walec kołkowy</h3>
+                                    <p class="card-model">Demag 1.2T</p>
+                                    <div class="card-price-list">
+                                        <strong>Cennik (netto):</strong>
+                                        <p>Cena / doba: <span>150 PLN</span></p>
+                                        <p>Cena / do 5h: <span>100 PLN</span></p>
+                                    </div>
+                                    <a class="card-toggle" data-fancybox data-src="#details-6">
+                                        Pokaż opis
+                                    </a>
+                                    <div class="card-details" id="details-6">
+                                        <div class="card-description">
+                                            <strong>Opis:</strong>
+                                            <p>Profesjonalne urządzenie do efektywnego zagęszczania gruntu spoistego,
+                                                takiego jak
+                                                [cite_start]glina czy iły. [cite: 70] Kompaktowe wymiary
+                                                (szerokość bębna ok. 800 mm) [cite_start]i waga 1.2 tony ułatwiają
+                                                transport i obsługę. [cite: 71, 77]</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <a href="rental.html#contact" class="btn btn-primary-outline">Zapytaj o wynajem</a>
+                                </div>
+                            </div>
+                        </div>
 
-                <div class="offer" data-aos="fade-up">
-                    <div class="offer__img">
-                        <a href="./dist/img/rental/laweta.jpg" data-fancybox="gallery7">
-                            <img src="./dist/img/rental/laweta.jpg" alt="Laweta" class="offer__image">
-                        </a>
-                    </div>
-                    <h3 class="offer__title">Laweta eder</h3>
-                    <div class="offer__description">
-                        <p>Laweta o ładowności 2,25 tony, przeznaczona do transportu różnego rodzaju maszyn i pojazdów.
-                        </p>
-                    </div>
-                    <div class="offer-info">
-                        <p>W celu wynajmu prosimy o <a href="rental.html#contact">kontakt</a></p>
-                    </div>
-                </div>
+                        <div class="col-xl-4 col-md-6" data-category="walec">
+                            <div class="card rental-card h-100">
+                                <a href="./dist/img/rental/walec_2.jpg" data-fancybox="gallery-7"
+                                    class="card-img-wrapper">
+                                    <img src="./dist/img/rental/walec_2.jpg" class="card-img-top" alt="Walec bębnowy">
+                                </a>
+                                <div class="card-body">
+                                    <h3 class="card-title">Walec Prowadzony</h3>
+                                    <p class="card-model">BOMAG BW 75 S</p>
+                                    <div class="card-price-list">
+                                        <strong>Cennik (netto):</strong>
+                                        <p>Cena / doba: <span>150 PLN</span></p>
+                                        <p>Cena / do 5h: <span>100 PLN</span></p>
+                                    </div>
+                                    <a class="card-toggle" data-fancybox data-src="#details-7">
+                                        Pokaż opis
+                                    </a>
+                                    <div class="card-details" id="details-7">
+                                        <div class="card-description">
+                                            <strong>Opis:</strong>
+                                            <p>Niezawodna, dwubębnowa maszyna do zagęszczania gruntu w trudno dostępnych
+                                                [cite_start]miejscach, idealna do budowy dróg i prac krajobrazowych.
+                                                [cite: 82] [cite_start]Walec waży około 1000 kg. [cite: 83]</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <a href="rental.html#contact" class="btn btn-primary-outline">Zapytaj o wynajem</a>
+                                </div>
+                            </div>
+                        </div>
 
-                <div class="offer" data-aos="fade-up">
-                    <div class="offer__img">
-                        <a href="./dist/img/rental/skoczek.jpg" data-fancybox="gallery8">
-                            <img src="./dist/img/rental/skoczek.jpg" alt="Skoczek" class="offer__image">
-                        </a>
-                    </div>
-                    <h3 class="offer__title">Skoczek</h3>
-                    <div class="offer__description">
-                        <p>Wydajna zagęszczarka do gruntu, niezastąpiona podczas prac w trudno dostępnych miejscach.</p>
-                    </div>
-                    <div class="offer-info">
-                        <p>W celu wynajmu prosimy o <a href="rental.html#contact">kontakt</a></p>
-                    </div>
-                </div>
+                        <div class="col-xl-4 col-md-6" data-category="laweta">
+                            <div class="card rental-card h-100">
+                                <a href="./dist/img/rental/laweta.jpg" data-fancybox="gallery-8"
+                                    class="card-img-wrapper">
+                                    <img src="./dist/img/rental/laweta.jpg" class="card-img-top" alt="Laweta eder">
+                                </a>
+                                <div class="card-body">
+                                    <h3 class="card-title">Laweta uchylna</h3>
+                                    <p class="card-model">Eder (Ładowność: 2.25T)</p>
+                                    <div class="card-price-list">
+                                        <strong>Cennik (netto):</strong>
+                                        <p>Cena / doba: <span>200 PLN</span></p>
+                                        <p>Cena / do 5h: <span>140 PLN</span></p>
+                                    </div>
+                                    <a class="card-toggle" data-fancybox data-src="#details-8">
+                                        Pokaż opis
+                                    </a>
+                                    <div class="card-details" id="details-8">
+                                        <div class="card-description">
+                                            <strong>Opis:</strong>
+                                            [cite_start]<p>Laweta o ładowności 2,25 tony[cite: 138], przeznaczona do
+                                                transportu różnego rodzaju
+                                                maszyn i pojazdów.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <a href="rental.html#contact" class="btn btn-primary-outline">Zapytaj o wynajem</a>
+                                </div>
+                            </div>
+                        </div>
 
-                <div class="offer" data-aos="fade-up">
-                    <div class="offer__img">
-                        <a href="./dist/img/rental/przecinarka_beton.jpg" data-fancybox="gallery9">
-                            <img src="./dist/img/rental/przecinarka_beton.jpg" alt="Przecinarka do betonu"
-                                class="offer__image">
-                        </a>
-                    </div>
-                    <h3 class="offer__title">Przecinarka do betonu</h3>
-                    <div class="offer__description">
-                        <p>Profesjonalna przecinarka do betonu, idealna do precyzyjnego cięcia nawierzchni betonowych.
-                        </p>
-                    </div>
-                    <div class="offer-info">
-                        <p>W celu wynajmu prosimy o <a href="rental.html#contact">kontakt</a></p>
-                    </div>
-                </div>
+                        <div class="col-xl-4 col-md-6" data-category="zageszczarka">
+                            <div class="card rental-card h-100">
+                                <a href="./dist/img/rental/skoczek.jpg" data-fancybox="gallery-9"
+                                    class="card-img-wrapper">
+                                    <img src="./dist/img/rental/skoczek.jpg" class="card-img-top" alt="Skoczek">
+                                </a>
+                                <div class="card-body">
+                                    <h3 class="card-title">Ubijarka Gruntu</h3>
+                                    <p class="card-model">Skoczek (ok. 80 kg)</p>
+                                    <div class="card-price-list">
+                                        <strong>Cennik (netto):</strong>
+                                        <p>Cena / doba: <span>100 PLN</span></p>
+                                        <p>Cena / do 5h: <span>75 PLN</span></p>
+                                    </div>
+                                    <a class="card-toggle" data-fancybox data-src="#details-9">
+                                        Pokaż opis
+                                    </a>
+                                    <div class="card-details" id="details-9">
+                                        <div class="card-description">
+                                            <strong>Opis:</strong>
+                                            <p>Profesjonalny skoczek wibracyjny o masie około 80 kg, idealny do
+                                                zagęszczania gruntu w
+                                                [cite_start]wykopach, przy fundamentach i zagęszczaniu podsypek. [cite:
+                                                50] [cite_start]Doskonale sprawdza się w trudno dostępnych miejscach.
+                                                [cite: 51]</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <a href="rental.html#contact" class="btn btn-primary-outline">Zapytaj o wynajem</a>
+                                </div>
+                            </div>
+                        </div>
 
-                <div class="offer" data-aos="fade-up">
-                    <div class="offer__img">
-                        <a href="./dist/img/rental/przecinarka_stolowa.jpg" data-fancybox="gallery10">
-                            <img src="./dist/img/rental/przecinarka_stolowa.jpg" alt="Przecinarka stołowa do betonu"
-                                class="offer__image">
-                        </a>
-                    </div>
-                    <h3 class="offer__title">Przecinarka stołowa </br>do betonu</h3>
-                    <div class="offer__description">
-                        <p>Stacjonarna przecinarka do betonu, zapewniająca dokładność i wygodę podczas cięcia elementów.
-                        </p>
-                    </div>
-                    <div class="offer-info">
-                        <p>W celu wynajmu prosimy o <a href="rental.html#contact">kontakt</a></p>
-                    </div>
-                </div>
+                        <div class="col-xl-4 col-md-6" data-category="przecinarka">
+                            <div class="card rental-card h-100">
+                                <a href="./dist/img/rental/przecinarka_beton.jpg" data-fancybox="gallery-10"
+                                    class="card-img-wrapper">
+                                    <img src="./dist/img/rental/przecinarka_beton.jpg" class="card-img-top"
+                                        alt="Przecinarka do betonu">
+                                </a>
+                                <div class="card-body">
+                                    <h3 class="card-title">Przecinarka Jezdna</h3>
+                                    <p class="card-model">Norton Clipper C99 (lub podobny)</p>
+                                    <div class="card-price-list">
+                                        <strong>Cennik (netto):</strong>
+                                        <p>Cena / doba: <span>130 PLN</span></p>
+                                        <p>Cena / do 5h: <span>90 PLN</span></p>
+                                        <p>Zużycie tarczy: <span>30 PLN/1mm</span></p>
+                                    </div>
+                                    <a class="card-toggle" data-fancybox data-src="#details-10">
+                                        Pokaż opis
+                                    </a>
+                                    <div class="card-details" id="details-10">
+                                        <div class="card-description">
+                                            <strong>Opis:</strong>
+                                            <p>Profesjonalna przecinarka jezdna idealna do
+                                                [cite_start]precyzyjnego i szybkiego cięcia nawierzchni asfaltowych i
+                                                betonowych. [cite: 176] [cite_start]Wyposażenie w zbiornik na wodę
+                                                umożliwia chłodzenie tarczy. [cite: 177]</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <a href="rental.html#contact" class="btn btn-primary-outline">Zapytaj o wynajem</a>
+                                </div>
+                            </div>
+                        </div>
 
-                <div class="offer" data-aos="fade-up">
-                    <div class="offer__img">
-                        <a href="./dist/img/rental/citroen_c2.jpg" data-fancybox="gallery11">
-                            <img src="./dist/img/rental/citroen_c2.jpg" alt="Citroen C2" class="offer__image">
-                        </a>
-                    </div>
-                    <h3 class="offer__title">Citroen C2</h3>
-                    <div class="offer__description">
-                    </div>
-                    <div class="offer-info">
-                        <p>W celu wynajmu prosimy o <a href="rental.html#contact">kontakt</a></p>
-                    </div>
-                </div>
+                        <div class="col-xl-4 col-md-6" data-category="przecinarka">
+                            <div class="card rental-card h-100">
+                                <a href="./dist/img/rental/przecinarka_stolowa.jpg" data-fancybox="gallery-11"
+                                    class="card-img-wrapper">
+                                    <img src="./dist/img/rental/przecinarka_stolowa.jpg" class="card-img-top"
+                                        alt="Przecinarka stołowa do betonu">
+                                </a>
+                                <div class="card-body">
+                                    <h3 class="card-title">Przecinarka Stołowa</h3>
+                                    <p class="card-model">Do kostki brukowej</p>
+                                    <div class="card-price-list">
+                                        <strong>Cennik (netto):</strong>
+                                        <p>Cena / doba: <span>110 PLN</span></p>
+                                        <p>Cena / do 5h: <span>85 PLN</span></p>
+                                        <p>Zużycie tarczy: <span>30 PLN/1mm</span></p>
+                                    </div>
+                                    <a class="card-toggle" data-fancybox data-src="#details-11">
+                                        Pokaż opis
+                                    </a>
+                                    <div class="card-details" id="details-11">
+                                        <div class="card-description">
+                                            <strong>Opis:</strong>
+                                            <p>Stołowa przecinarka wodna jest przeznaczona do precyzyjnego i czystego
+                                                cięcia kostki
+                                                [cite_start]brukowej, płytek chodnikowych i krawężników. [cite: 186]
+                                                System chłodzenia
+                                                [cite_start]wodą zapewnia czystą pracę. [cite: 187]</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <a href="rental.html#contact" class="btn btn-primary-outline">Zapytaj o wynajem</a>
+                                </div>
+                            </div>
+                        </div>
 
-                <div class="offer" data-aos="fade-up">
-                    <div class="offer__img">
-                        <a href="./dist/img/rental/fiat_doblo.jpg" data-fancybox="gallery12">
-                            <img src="./dist/img/rental/fiat_doblo.jpg" alt="Fiat Doblo" class="offer__image">
-                        </a>
-                    </div>
-                    <h3 class="offer__title">Fiat Doblo</h3>
-                    <div class="offer__description">
-                    </div>
-                    <div class="offer-info">
-                        <p>W celu wynajmu prosimy o <a href="rental.html#contact">kontakt</a></p>
-                    </div>
-                </div>
+                        <div class="col-xl-4 col-md-6" data-category="samochod">
+                            <div class="card rental-card h-100">
+                                <a href="./dist/img/rental/citroen_c2.jpg" data-fancybox="gallery-12"
+                                    class="card-img-wrapper">
+                                    <img src="./dist/img/rental/citroen_c2.jpg" class="card-img-top" alt="Citroen C2">
+                                </a>
+                                <div class="card-body">
+                                    <h3 class="card-title">Citroen C2</h3>
+                                    <p class="card-model">Samochód osobowy</p>
+                                    <div class="card-price-list">
+                                        <strong>Cennik (netto):</strong>
+                                        <p>Cena / doba: <span>... PLN</span></p>
+                                    </div>
+                                    <a class="card-toggle" data-fancybox data-src="#details-12">
+                                        Pokaż opis
+                                    </a>
+                                    <div class="card-details" id="details-12">
+                                        <div class="card-description">
+                                            <strong>Opis:</strong>
+                                            <p>Mały, zwinny samochód osobowy idealny do poruszania się po mieście.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <a href="rental.html#contact" class="btn btn-primary-outline">Zapytaj o wynajem</a>
+                                </div>
+                            </div>
+                        </div>
 
-                <div class="offer" data-aos="fade-up">
-                    <div class="offer__img">
-                        <a href="./dist/img/rental/peugeot_boxer.jpg" data-fancybox="gallery13">
-                            <img src="./dist/img/rental/peugeot_boxer.jpg" alt="Peugeot Boxer" class="offer__image">
-                        </a>
-                    </div>
-                    <h3 class="offer__title">Peugeot Boxer</h3>
-                    <div class="offer__description">
-                    </div>
-                    <div class="offer-info">
-                        <p>W celu wynajmu prosimy o <a href="rental.html#contact">kontakt</a></p>
-                    </div>
-                </div>
+                        <div class="col-xl-4 col-md-6" data-category="samochod">
+                            <div class="card rental-card h-100">
+                                <a href="./dist/img/rental/fiat_doblo.jpg" data-fancybox="gallery-13"
+                                    class="card-img-wrapper">
+                                    <img src="./dist/img/rental/fiat_doblo.jpg" class="card-img-top" alt="Fiat Doblo">
+                                </a>
+                                <div class="card-body">
+                                    <h3 class="card-title">Fiat Doblo</h3>
+                                    <p class="card-model">Samochód dostawczy</p>
+                                    <div class="card-price-list">
+                                        <strong>Cennik (netto):</strong>
+                                        <p>Cena / doba: <span>... PLN</span></p>
+                                    </div>
+                                    <a class="card-toggle" data-fancybox data-src="#details-13">
+                                        Pokaż opis
+                                    </a>
+                                    <div class="card-details" id="details-13">
+                                        <div class="card-description">
+                                            <strong>Opis:</strong>
+                                            <p>Pojemny samochód dostawczy do transportu towarów.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <a href="rental.html#contact" class="btn btn-primary-outline">Zapytaj o wynajem</a>
+                                </div>
+                            </div>
+                        </div>
 
-            </div>
-        </div>
-    </section>
+                        <div class="col-xl-4 col-md-6" data-category="samochod">
+                            <div class="card rental-card h-100">
+                                <a href="./dist/img/rental/peugeot_boxer.jpg" data-fancybox="gallery-14"
+                                    class="card-img-wrapper">
+                                    <img src="./dist/img/rental/peugeot_boxer.jpg" class="card-img-top"
+                                        alt="Peugeot Boxer">
+                                </a>
+                                <div class="card-body">
+                                    <h3 class="card-title">Peugeot Boxer</h3>
+                                    <p class="card-model">Rok: 2013</p>
+                                    <div class="card-price-list">
+                                        <strong>Cennik (netto):</strong>
+                                        <p>Cena / doba: <span>200 PLN</span></p>
+                                        <p>Cena / do 5h: <span>120 PLN</span></p>
+                                    </div>
+                                    <a class="card-toggle" data-fancybox data-src="#details-14">
+                                        Pokaż opis
+                                    </a>
+                                    <div class="card-details" id="details-14">
+                                        <div class="card-description">
+                                            <strong>Opis:</strong>
+                                            <p>Sprawdzony i solidny samochód dostawczy, który poradzi sobie z
+                                                transportem do trzech
+                                                [cite_start]osób i ładunkiem do 907 kg. [cite: 38, 44, 45] Wytrzymały
+                                                silnik Diesla zapewnia niezawodność i
+                                                [cite_start]ekonomiczną jazdę. [cite: 39, 43]</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <a href="rental.html#contact" class="btn btn-primary-outline">Zapytaj o wynajem</a>
+                                </div>
+                            </div>
+                        </div>
 
-    <section id="partner-section" class="partner py-5">
-        <div class="container">
-            <h2 class="section-title">SYSTEMY AUTOMATYCZNEGO SMAROWANIA</h2>
-            <div class="underline"></div>
-
-            <div class="partner__box" data-aos="fade-right">
-                <div class="partner__box-img">
-                    <img src="./dist/img/al-kmb.png" alt="Zdjęcie promujące partnera al-kmb" class="partner__img">
-                </div>
-                <div class="partner__text">
-                    <p>
-                        Systemy centralnego smarowania zapewniają <strong class="blue-text">precyzyjne i
-                            automatyczne smarowanie,</strong> które:
-                    <ul>
-                        <li><strong>minimalizuje przestoje,</strong></li>
-                        <li><strong>zwiększa wydajność,</strong></li>
-                        <li><strong>redukuje koszty eksploatacji.</strong></li>
-                    </ul>
-                    </p>
-                    <a href="https://www.al-kmb.pl/" class="link">
-                        Dowiedz się więcej!
-                    </a>
-                </div>
+                    </div>
+                </main>
             </div>
         </div>
     </section>
@@ -329,7 +600,12 @@
     <script src="./dist/js/slick.min.js"></script>
     <script src="./dist/js/script.min.js"></script>
     <script src="./dist/js/navButton.min.js"></script>
+    <script src="./dist/js/rental.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4/dist/fancybox.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4/dist/fancybox.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
 
 </body>
 

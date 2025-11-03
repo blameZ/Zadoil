@@ -51,6 +51,10 @@ ul {
 .section-title {
 	text-align: center;
 	text-transform: uppercase;
+
+	&--padding-top {
+		padding-top: 5rem;
+	}
 }
 
 .underline {
@@ -591,6 +595,91 @@ header.hero-img {
 	}
 }
 
+.card-toggle {
+	display: inline-block;
+	text-decoration: none;
+	color: #555;
+	font-weight: 600;
+	font-size: 0.9rem;
+
+	margin-top: 0.5rem;
+	padding-top: 0;
+	cursor: pointer;
+
+	&:hover {
+		color: colors.$main-color;
+	}
+}
+
+.card-details {
+	display: none;
+}
+
+.card-price-list {
+	text-align: left;
+	margin-top: auto;
+	padding-top: 1rem;
+	border-top: 1px solid #f0f0f0;
+	min-height: 8rem;
+
+	strong {
+		display: none;
+	}
+
+	p {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 0.5rem;
+		color: #555;
+		font-size: 0.9rem;
+		font-weight: 500;
+
+		span {
+			font-weight: 600;
+			color: #333;
+			font-size: 1.1rem;
+		}
+
+		&:first-of-type {
+			color: colors.$bg-color-dark;
+			font-weight: 600;
+			font-size: 1rem;
+
+			span {
+				font-weight: 700;
+				color: colors.$main-color;
+				font-size: 1.75rem;
+				letter-spacing: -0.5px;
+			}
+		}
+	}
+}
+
+.fancybox__content {
+	.card-details {
+		display: block !important;
+		padding: 1.5rem;
+		max-width: 500px;
+		color: #333;
+
+		.card-description {
+			strong {
+				color: colors.$bg-color-dark;
+				display: block;
+				margin-bottom: 0.75rem;
+				font-size: 1.2rem;
+			}
+			p {
+				color: #555;
+				line-height: 1.7;
+				margin-bottom: 0;
+				font-size: 1rem;
+			}
+		}
+	}
+}
+
 .aboutus {
 	i {
 		margin-top: 20px;
@@ -691,238 +780,230 @@ header.hero-img {
 	}
 }
 
+// ===============================================
+// === SEKCJA WYPOŻYCZALNI (Refaktoryzacja) =====
+// ===============================================
+
+// Zastąp starą definicję .offers tą poniżej
 .offers {
-	padding: 10rem 0;
-	background: linear-gradient(120deg, colors.$white, colors.$light-gray);
+	padding: 4rem 0; // Zmniejszony padding z 10rem
+	background: colors.$bg-color; // Używamy $bg-color (jaśniejsze tło)
 	font-family: 'League Spartan', sans-serif;
 	color: rgba(0, 0, 0, 0.85);
 
-	&__grid {
-		display: flex;
-		flex-wrap: wrap;
-		gap: 2rem;
-		justify-content: center;
-		max-width: 1200px;
-		margin: 0 auto;
+	.results-info {
+		border-bottom: 1px solid #eee;
+		color: #777;
+	}
+}
+
+// ===============================================
+// === NOWY PASEK BOCZNY (Sidebar) ==============
+// ===============================================
+
+.rental-sidebar {
+	.widget {
+		background: colors.$white;
+		padding: 1.5rem;
+		margin-bottom: 2rem;
+		border-radius: 8px;
+		border: 1px solid #e9e9e9;
+		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
 	}
 
-	.offer {
-		display: flex;
-		flex-direction: column;
-		align-items: flex-start;
-		flex: 1 1 100%;
-		max-width: 100%;
-		background-color: colors.$white;
-		border-radius: 12px;
-		border: 1px solid rgba(0, 0, 0, 0.1);
-		overflow: hidden;
-		box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
-		cursor: pointer;
+	.widget-title {
+		font-size: 1.25rem;
+		font-weight: 700;
+		text-transform: uppercase;
+		color: colors.$black;
+		margin-bottom: 1.5rem;
+		padding-bottom: 0.75rem;
+		border-bottom: 2px solid colors.$main-color;
+		position: relative;
+	}
 
-		&__video-link {
-			margin: 1rem auto 0;
-			text-align: center;
+	.widget-search {
+		.search-form {
+			position: relative;
 
-			a {
+			.form-control {
+				height: 50px;
+				padding-left: 1.2rem;
+				padding-right: 50px;
+				border: 1px solid #ddd;
+				&:focus {
+					border-color: colors.$main-color;
+					box-shadow: 0 0 0 0.2rem rgba(colors.$main-color, 0.25);
+				}
+			}
+
+			button {
+				position: absolute;
+				top: 0;
+				right: 0;
+				height: 50px;
+				width: 50px;
+				background: none;
+				border: none;
 				color: colors.$main-color;
-				text-decoration: none;
-				font-weight: 700;
 				font-size: 1.1rem;
-				padding: 0.25rem 0.5rem;
-				border-bottom: 2px solid transparent;
-				transition: border-color 0.3s ease;
-
-				&:hover,
-				&:focus {
-					border-color: colors.$main-color-dark;
-					outline: none;
-				}
-			}
-		}
-
-		&__img {
-			width: 100%;
-			min-height: 250px;
-			height: 250px;
-			overflow: hidden;
-			border-bottom: 2px solid colors.$main-color;
-
-			.offer__image {
-				width: 100%;
-				height: 100%;
-				object-fit: cover;
-				transition: transform 0.5s ease, filter 0.5s ease;
-
-				&:hover {
-					transform: scale(1.05) rotate(1deg);
-					filter: brightness(1.05) saturate(1.05);
-				}
-			}
-		}
-
-		&__price-row {
-			display: flex;
-			flex-direction: column;
-			align-items: start;
-			margin: 0 1.5rem;
-			padding: 0.75rem 0;
-			border-top: 1px solid rgba(0, 0, 0, 0.05);
-
-			.offer__toggle {
-				margin: 0.5rem;
-				background-color: colors.$white;
-				border: 2px solid colors.$main-color;
-				border-radius: 6px;
-				padding: 0.5rem 1rem;
 				cursor: pointer;
-				font-size: 1.25rem;
-				font-weight: 600;
-				color: colors.$main-color;
-				transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
-
-				&:hover,
-				&:focus {
-					background-color: colors.$main-color;
-					color: colors.$white;
-					box-shadow: 0 0 8px colors.$main-color;
-					outline: none;
-				}
-			}
-		}
-
-		&__price {
-			margin-bottom: 0;
-			width: 100%;
-			text-align: left;
-			color: colors.$main-color-dark;
-			font-size: 1.4rem;
-			font-weight: 600;
-
-			strong {
-				color: colors.$black;
-			}
-		}
-
-		.offer-info {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			margin-top: auto;
-			height: 40px;
-			width: 100%;
-			background-color: colors.$bg-color;
-			font-size: 1rem;
-			font-weight: 500;
-
-			p {
-				margin: 0;
-			}
-
-			a {
-				text-decoration: none;
-				color: colors.$main-color;
-				padding-left: 0.5rem;
 				transition: color 0.3s ease;
 
-				&:hover,
-				&:focus {
+				&:hover {
 					color: colors.$bg-color-dark;
-					outline: none;
 				}
 			}
 		}
+	}
 
-		&__title {
-			padding: 1rem 1.5rem 0.5rem 1.5rem;
-			width: 100%;
-			text-align: left;
-			font-size: 1.8rem;
-			font-weight: 700;
-			color: colors.$main-color;
-			text-transform: uppercase;
-			letter-spacing: 2px;
-			user-select: none;
-		}
+	// Widget Kategorii
+	.widget-categories {
+		.category-list {
+			list-style: none;
+			padding-left: 0;
+			margin-bottom: 0;
 
-		&__description {
-			font-size: 1rem;
-			margin: 0 1.5rem 1rem 1.5rem;
-			color: rgba(0, 0, 0, 0.75);
-			line-height: 1.8;
-			text-align: left;
-
-			strong {
-				display: block;
-				margin: 1rem 0;
-				color: colors.$main-color-dark;
+			a.active-filter {
+				background: rgba(0, 102, 255, 0.1); /* Użyj swojego koloru $main-color */
+				color: #0066ff; /* Użyj swojego koloru $main-color */
+				font-weight: 700;
 			}
-		}
 
-		&__details {
-			margin: 0 1.5rem 1.5rem 1.5rem;
-			padding: 0 1rem 1rem 0;
-			max-height: 0;
-			overflow: hidden;
-			transition: max-height 0.5s ease, opacity 0.5s ease;
-			opacity: 0;
-			visibility: hidden;
+			li {
+				margin-bottom: 0.5rem;
 
-			&.expanded {
-				max-height: 2000px;
-				opacity: 1;
-				visibility: visible;
-			}
-		}
+				a {
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+					padding: 0.75rem 1rem;
+					text-decoration: none;
+					color: #555;
+					font-weight: 500;
+					border-radius: 6px;
+					transition: all 0.3s ease;
 
-		&__toggle {
-			font-weight: 600;
-			cursor: pointer;
-			user-select: none;
-			padding: 0.2rem 0.5rem;
-			border-radius: 4px;
-			color: colors.$main-color;
-			transition: color 0.3s ease;
+					span {
+						font-size: 0.9em;
+						color: #999;
+						background: #f5f5f5;
+						padding: 0.15rem 0.5rem;
+						border-radius: 4px;
+					}
 
-			&:hover,
-			&:focus {
-				color: colors.$bg-color-dark;
-				outline: none;
+					&:hover {
+						background: rgba(colors.$main-color, 0.05);
+						color: colors.$main-color;
+
+						span {
+							background: colors.$main-color;
+							color: colors.$white;
+						}
+					}
+				}
 			}
 		}
 	}
+}
 
-	@media (min-width: 576px) {
-		.offer {
-			flex: 1 1 calc(100% - 2rem);
-			max-width: calc(100% - 2rem);
+// ===============================================
+// === NOWE KARTY PRODUKTÓW (Refaktoryzacja) ====
+// ===============================================
+
+.rental-card {
+	// Używamy .card z Bootstrapa jako bazy
+	border: 1px solid #e9e9e9;
+	border-radius: 12px;
+	background-color: colors.$white;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+	display: flex;
+	flex-direction: column;
+
+	&:hover {
+		transform: translateY(-5px);
+		box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+	}
+
+	// Wrapper dla obrazka, aby utrzymać proporcje
+	.card-img-wrapper {
+		display: block;
+		width: 100%;
+		aspect-ratio: 1 / 1; // Robi obrazek kwadratowym (jak na inspiracji)
+		overflow: hidden;
+		border-top-left-radius: 12px;
+		border-top-right-radius: 12px;
+		padding: 1rem; // Dodaje "oddech" wokół maszyny
+		background: #fdfdfd;
+		border-bottom: 1px solid #f0f0f0;
+	}
+
+	.card-img-top {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		transition: transform 0.4s ease;
+
+		&--position-left {
+			object-position: left;
 		}
 	}
 
-	@media (min-width: 768px) {
-		.offer {
-			flex: 1 1 calc(50% - 2rem);
-			max-width: calc(50% - 2rem);
-		}
+	a:hover .card-img-top {
+		transform: scale(1.05);
 	}
 
-	@media (min-width: 992px) {
-		nav {
-			.nav-item {
-				opacity: 1;
-				transform: translateY(0);
-				transition: none;
-			}
-		}
-
-		.offer {
-			flex: 1 1 calc(33.333% - 2rem);
-			max-width: calc(33.333% - 2rem);
-		}
+	.card-body {
+		display: flex;
+		flex-direction: column;
+		flex-grow: 1;
+		padding: 1rem 1.25rem;
+		text-align: center;
 	}
 
-	@media (hover: hover) and (pointer: fine) {
-		.offer__image {
-			will-change: transform, filter;
+	.card-title {
+		font-size: 1.4rem;
+		font-weight: 700;
+		color: colors.$bg-color-dark;
+		text-transform: uppercase;
+		margin-bottom: 0.25rem;
+		letter-spacing: 0.5px;
+		transition: color 0.3s ease;
+		min-height: 3.6rem;
+	}
+
+	.card-model {
+		font-size: 0.9rem;
+		color: #777;
+		margin-bottom: 0.5rem;
+	}
+
+	.card-footer {
+		background-color: transparent;
+		border-top: 1px solid #f0f0f0;
+		padding: 1rem 1.25rem;
+		text-align: center;
+	}
+
+	.btn-primary-outline {
+		text-decoration: none;
+		color: colors.$main-color;
+		border: 2px solid colors.$main-color;
+		border-radius: 30px;
+		padding: 0.6rem 1.5rem;
+		font-weight: 600;
+		text-transform: uppercase;
+		font-size: 0.8rem;
+		letter-spacing: 0.5px;
+		transition: all 0.3s ease;
+
+		&:hover,
+		&:focus {
+			background-color: colors.$main-color;
+			color: colors.$white;
+			box-shadow: 0 4px 10px rgba(colors.$main-color, 0.3);
+			outline: none;
 		}
 	}
 }
