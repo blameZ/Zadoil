@@ -8,7 +8,6 @@
 	padding: 0;
 }
 
-body,
 html {
 	overflow-x: hidden;
 }
@@ -802,6 +801,12 @@ header.hero-img {
 // ===============================================
 
 .rental-sidebar {
+	@media (min-width: 992px) {
+		position: sticky;
+		top: 12rem;
+		max-height: calc(100vh - 4rem);
+		overflow-y: auto;
+	}
 	.widget {
 		background: colors.$white;
 		padding: 1.5rem;
@@ -865,8 +870,8 @@ header.hero-img {
 			margin-bottom: 0;
 
 			a.active-filter {
-				background: rgba(0, 102, 255, 0.1); /* Użyj swojego koloru $main-color */
-				color: #0066ff; /* Użyj swojego koloru $main-color */
+				background: rgba(0, 102, 255, 0.1);
+				color: #0066ff;
 				font-weight: 700;
 			}
 
