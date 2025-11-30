@@ -2,6 +2,11 @@
 @use './variables' as variables;
 @import './animations';
 
+$shadow-soft: 0 10px 40px -10px rgba(0, 0, 0, 0.08);
+$shadow-hover: 0 20px 50px -10px rgba(0, 0, 0, 0.15);
+$radius-main: 16px;
+$transition-main: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+
 * {
 	box-sizing: border-box;
 	margin: 0;
@@ -10,24 +15,19 @@
 
 html {
 	overflow-x: hidden;
-}
-
-html {
 	scroll-padding-top: 75px;
 }
 
 body {
-	background-color: colors.$bg-color;
+	background-color: #f8f9fa;
+	color: #2c3e50;
 	font-family: 'League Spartan', sans-serif;
 	font-weight: 400;
+	line-height: 1.7;
 }
 
 hr {
-	margin: 20px auto;
-	text-align: center;
-	width: 75%;
-	border: none;
-	border-top: 2px solid colors.$black;
+	display: none;
 }
 
 section {
@@ -50,6 +50,10 @@ ul {
 .section-title {
 	text-align: center;
 	text-transform: uppercase;
+	font-weight: 800;
+	letter-spacing: -0.5px;
+	margin-bottom: 1rem;
+	color: colors.$bg-color-dark;
 
 	&--padding-top {
 		padding-top: 5rem;
@@ -57,87 +61,37 @@ ul {
 }
 
 .underline {
-	margin: 0 auto 40px;
-	width: 60px;
+	width: 80px;
 	height: 4px;
-	background-color: colors.$main-color;
+	background: linear-gradient(90deg, colors.$main-color, transparent);
+	margin: 0 auto 60px;
+	border-radius: 2px;
+}
+
+.btn {
+	border-radius: 50px;
+	padding: 0.8rem 2rem;
+	font-weight: 600;
+	letter-spacing: 1px;
+	transition: $transition-main;
+
+	&-outline-light {
+		&:hover {
+			transform: translateY(-3px);
+			box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
+		}
+	}
 }
 
 nav {
 	text-transform: uppercase;
 	z-index: 5;
 	transition: background-color 0.6s;
-	background-color: colors.$bg-color-dark;
+	background-color: rgba(colors.$bg-color-dark, 0.95);
+	backdrop-filter: blur(10px);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 	padding: 1em;
-
-	#nav-icon {
-		width: 60px;
-		height: 45px;
-		position: relative;
-		margin: auto 0 auto auto;
-		right: 0;
-		-webkit-transform: rotate(0deg);
-		-moz-transform: rotate(0deg);
-		-o-transform: rotate(0deg);
-		transform: rotate(0deg);
-		transform: scale(0.6);
-		-webkit-transition: 0.5s ease-in-out;
-		-moz-transition: 0.5s ease-in-out;
-		-o-transition: 0.5s ease-in-out;
-		transition: 0.5s ease-in-out;
-		cursor: pointer;
-	}
-
-	#nav-icon span {
-		display: block;
-		position: absolute;
-		height: 9px;
-		width: 100%;
-		background: colors.$main-color;
-		opacity: 1;
-		left: 0;
-		-webkit-transform: rotate(0deg);
-		-moz-transform: rotate(0deg);
-		-o-transform: rotate(0deg);
-		transform: rotate(0deg);
-		-webkit-transition: 0.25s ease-in-out;
-		-moz-transition: 0.25s ease-in-out;
-		-o-transition: 0.25s ease-in-out;
-		transition: 0.25s ease-in-out;
-	}
-
-	#nav-icon span:nth-child(1) {
-		top: 0px;
-	}
-
-	#nav-icon span:nth-child(2) {
-		top: 18px;
-	}
-
-	#nav-icon span:nth-child(3) {
-		top: 36px;
-	}
-
-	#nav-icon.open span:nth-child(1) {
-		top: 18px;
-		-webkit-transform: rotate(135deg);
-		-moz-transform: rotate(135deg);
-		-o-transform: rotate(135deg);
-		transform: rotate(135deg);
-	}
-
-	#nav-icon.open span:nth-child(2) {
-		opacity: 0;
-		left: -60px;
-	}
-
-	#nav-icon.open span:nth-child(3) {
-		top: 18px;
-		-webkit-transform: rotate(-135deg);
-		-moz-transform: rotate(-135deg);
-		-o-transform: rotate(-135deg);
-		transform: rotate(-135deg);
-	}
 
 	#nav-icon {
 		width: 50px;
@@ -372,6 +326,7 @@ nav {
 		}
 	}
 }
+
 .link {
 	position: relative;
 	display: inline-block;
@@ -448,6 +403,293 @@ header.hero-img {
 	}
 }
 
+.aboutus {
+	background-color: colors.$white;
+
+	.col-sm-6 {
+		margin-bottom: 2rem;
+	}
+
+	.aboutus-hover {
+		background: #fff;
+		padding: 2.5rem 1.5rem;
+		border-radius: $radius-main;
+		box-shadow: $shadow-soft;
+		border: 1px solid rgba(0, 0, 0, 0.03);
+		height: 100%;
+		transition: $transition-main;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: flex-start;
+
+		&:hover {
+			transform: translateY(-10px);
+			box-shadow: $shadow-hover;
+			border-color: rgba(colors.$main-color, 0.2);
+
+			i {
+				transform: scale(1.1) rotate(5deg);
+				color: colors.$main-color;
+			}
+		}
+
+		i {
+			font-size: 3rem;
+			margin-bottom: 1.5rem;
+			color: colors.$bg-color-dark;
+			transition: $transition-main;
+		}
+
+		.aboutus-card-title {
+			font-weight: 700;
+			font-size: 1.2rem;
+			margin-bottom: 1rem;
+			color: colors.$bg-color-dark;
+			text-transform: uppercase;
+		}
+
+		.aboutus-card-text {
+			font-size: 0.95rem;
+			color: #666;
+			line-height: 1.6;
+		}
+	}
+}
+
+.petrol-stations {
+	background-color: #fdfdfd;
+
+	&__box {
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 6rem;
+		background: #fff;
+		border-radius: $radius-main;
+		box-shadow: $shadow-soft;
+		overflow: hidden;
+
+		@media (min-width: 992px) {
+			flex-direction: row;
+			align-items: stretch;
+			margin-bottom: 4rem;
+
+			&:nth-of-type(even) {
+				flex-direction: row-reverse;
+			}
+		}
+	}
+
+	&__box-img {
+		position: relative;
+		min-height: 300px;
+
+		@media (min-width: 992px) {
+			width: 45%;
+			flex-shrink: 0;
+		}
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			transition: transform 0.6s ease;
+		}
+
+		&:hover img {
+			transform: scale(1.05);
+		}
+	}
+
+	&__box-text {
+		padding: 2.5rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		width: 100%;
+
+		@media (min-width: 992px) {
+			padding: 3rem 4rem;
+		}
+
+		iframe {
+			width: 100%;
+			height: 250px;
+			border-radius: 12px;
+			margin-top: 2rem;
+			border: none;
+			box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.1);
+		}
+	}
+
+	&__title {
+		font-size: 1.8rem;
+		font-weight: 700;
+		margin-bottom: 1.5rem;
+		color: colors.$bg-color-dark;
+	}
+
+	&__details {
+		display: grid;
+		grid-gap: 1.5rem;
+
+		@media (min-width: 768px) {
+			grid-template-columns: 1fr 1fr;
+		}
+
+		.station-info {
+			p {
+				margin-bottom: 0.5rem;
+				display: flex;
+				align-items: center;
+				gap: 10px;
+				color: #555;
+
+				i {
+					color: colors.$main-color;
+					width: 20px;
+					text-align: center;
+				}
+			}
+		}
+
+		.station-amenities {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 10px;
+			align-content: flex-start;
+
+			p {
+				background-color: rgba(colors.$main-color, 0.1);
+				color: colors.$main-color-dark;
+				padding: 0.4rem 1rem;
+				border-radius: 20px;
+				font-size: 0.85rem;
+				font-weight: 600;
+				margin: 0;
+				display: flex;
+				align-items: center;
+				gap: 8px;
+				transition: $transition-main;
+
+				&:hover {
+					background-color: colors.$main-color;
+					color: #fff;
+				}
+
+				i {
+					font-size: 0.9em;
+				}
+			}
+		}
+	}
+}
+
+.fuel-distribution,
+.construction {
+	background-color: #fff;
+	padding: 6rem 0;
+	color: #333;
+
+	&__box {
+		display: grid;
+		gap: 2rem;
+		align-items: center;
+
+		@media (min-width: 992px) {
+			grid-template-columns: 1fr 1fr;
+
+			.fuel-distribution__box-text,
+			.construction__text {
+				background: #ffffff; // Solid white
+				color: #2c3e50; // Dark text forced
+				padding: 3rem;
+				border-radius: $radius-main;
+				box-shadow: $shadow-soft;
+				z-index: 2;
+				margin-left: -50px;
+			}
+
+			.construction__text {
+				margin-left: 0;
+				margin-right: -50px;
+				order: 1;
+			}
+
+			.construction__box-img {
+				order: 2;
+			}
+		}
+	}
+
+	// Ensure text inside is dark
+	&__text,
+	p {
+		color: #2c3e50;
+	}
+
+	&__img,
+	.construction__img {
+		width: 100%;
+		height: auto;
+		border-radius: $radius-main;
+		box-shadow: $shadow-hover;
+		position: relative;
+		z-index: 1;
+	}
+
+	strong.blue-text {
+		color: colors.$main-color;
+		font-weight: 700;
+		position: relative;
+
+		&::after {
+			content: '';
+			position: absolute;
+			bottom: 2px;
+			left: 0;
+			width: 100%;
+			height: 8px;
+			background-color: rgba(colors.$main-color, 0.2);
+			z-index: -1;
+		}
+	}
+
+	ul {
+		list-style: none;
+		padding-left: 0;
+		margin-top: 1rem;
+
+		li {
+			position: relative;
+			padding-left: 30px;
+			margin-bottom: 0.5rem;
+			color: #2c3e50;
+
+			&::before {
+				content: '\f00c';
+				font-family: 'Font Awesome 6 Free';
+				font-weight: 900;
+				position: absolute;
+				left: 0;
+				color: colors.$main-color;
+			}
+		}
+	}
+}
+
+@media (max-width: 991px) {
+	.fuel-distribution__box-text,
+	.construction__text {
+		margin: 0 !important;
+		background: #ffffff;
+		color: #2c3e50;
+		box-shadow: $shadow-soft;
+		padding: 2rem;
+		border-radius: $radius-main;
+	}
+}
+
 .cards {
 	display: flex;
 	flex-direction: column;
@@ -476,12 +718,10 @@ header.hero-img {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
-		align-items: flex-start;
-		flex-wrap: wrap;
+		align-items: stretch;
 		padding-top: 5rem;
 		padding-bottom: 2rem;
 		gap: 4rem;
-		align-items: stretch;
 	}
 
 	&__item {
@@ -600,7 +840,6 @@ header.hero-img {
 	color: #555;
 	font-weight: 600;
 	font-size: 0.9rem;
-
 	margin-top: 0.5rem;
 	padding-top: 0;
 	cursor: pointer;
@@ -679,32 +918,9 @@ header.hero-img {
 	}
 }
 
-.aboutus {
-	i {
-		margin-top: 20px;
-		font-size: 30px;
-	}
-
-	.aboutus-card-title {
-		font-size: 18px;
-		text-transform: uppercase;
-	}
-
-	.aboutus-card-text {
-		font-size: 14px;
-	}
-
-	.aboutus-hover {
-		transition: color 0.6s;
-	}
-
-	.aboutus-hover:hover {
-		color: colors.$main-color;
-	}
-}
-
 .partner {
 	background: linear-gradient(120deg, colors.$light-gray, colors.$white);
+	padding: 6rem 0;
 
 	&__box {
 		display: flex;
@@ -725,6 +941,8 @@ header.hero-img {
 	&__img {
 		height: 100%;
 		width: 100%;
+		border-radius: $radius-main;
+		box-shadow: $shadow-soft;
 	}
 
 	a {
@@ -779,14 +997,9 @@ header.hero-img {
 	}
 }
 
-// ===============================================
-// === SEKCJA WYPOŻYCZALNI (Refaktoryzacja) =====
-// ===============================================
-
-// Zastąp starą definicję .offers tą poniżej
 .offers {
-	padding: 4rem 0; // Zmniejszony padding z 10rem
-	background: colors.$bg-color; // Używamy $bg-color (jaśniejsze tło)
+	padding: 4rem 0;
+	background: colors.$bg-color;
 	font-family: 'League Spartan', sans-serif;
 	color: rgba(0, 0, 0, 0.85);
 
@@ -795,10 +1008,6 @@ header.hero-img {
 		color: #777;
 	}
 }
-
-// ===============================================
-// === NOWY PASEK BOCZNY (Sidebar) ==============
-// ===============================================
 
 .rental-sidebar {
 	@media (min-width: 992px) {
@@ -862,7 +1071,6 @@ header.hero-img {
 		}
 	}
 
-	// Widget Kategorii
 	.widget-categories {
 		.category-list {
 			list-style: none;
@@ -912,12 +1120,7 @@ header.hero-img {
 	}
 }
 
-// ===============================================
-// === NOWE KARTY PRODUKTÓW (Refaktoryzacja) ====
-// ===============================================
-
 .rental-card {
-	// Używamy .card z Bootstrapa jako bazy
 	border: 1px solid #e9e9e9;
 	border-radius: 12px;
 	background-color: colors.$white;
@@ -931,15 +1134,14 @@ header.hero-img {
 		box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
 	}
 
-	// Wrapper dla obrazka, aby utrzymać proporcje
 	.card-img-wrapper {
 		display: block;
 		width: 100%;
-		aspect-ratio: 1 / 1; // Robi obrazek kwadratowym (jak na inspiracji)
+		aspect-ratio: 1 / 1;
 		overflow: hidden;
 		border-top-left-radius: 12px;
 		border-top-right-radius: 12px;
-		padding: 1rem; // Dodaje "oddech" wokół maszyny
+		padding: 1rem;
 		background: #fdfdfd;
 		border-bottom: 1px solid #f0f0f0;
 	}
@@ -1020,11 +1222,11 @@ footer {
 	color: colors.$white;
 	background-color: colors.$bg-color-dark;
 	text-align: center;
-}
 
-footer p {
-	margin: 0;
-	font-size: 0.8em;
+	p {
+		margin: 0;
+		font-size: 0.8em;
+	}
 }
 
 @media (min-width: 576px) {
